@@ -24,3 +24,7 @@ This is how easily it works!
 
 ### Workflow
 ![workflow](../jobin/readme-files/workflow.png)
+
+### Database schema
+#### Order
+![database](../jobin/readme-files/order_database_schema.png)
