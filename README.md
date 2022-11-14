@@ -7,17 +7,20 @@ This is how easily it works!
 
 ## Wireframe
 
-![frontpage](assets/images/wireframe/frontpage.png)
-![frontpage#2](assets/images/wireframe/frontpage2.png)
+![frontpage](../jobin/readme-files/images/wireframe/frontpage.png)
+![frontpage#2](../jobin/readme-files/images/wireframe/frontpage2.png)
 
-![register account](assets/images/wireframe/register_account.png)
-![login](assets/images/wireframe/login.png)
+![register account](../jobin/readme-files/images/wireframe/register_account.png)
+![login](../jobin/readme-files/images/wireframe/login.png)
 
 ### User loged in
-![user overview](assets/images/wireframe/user_overview.png)
-![user request details](assets/images/wireframe/user_request_details.png)
-![user presented candidates](assets/images/wireframe/user_presented_candidates.png)
+![user overview](../jobin/readme-files/images/wireframe/user_overview.png)
+![user request details](../jobin/readme-files/images/wireframe/user_request_details.png)
+![user presented candidates](../jobin/readme-files/images/wireframe/user_presented_candidates.png)
 
 ### Partner loged in
-![partner overview](assets/images/wireframe/partner_overview.png)
-![partner request details](assets/images/wireframe/partner_request_details.png)
+![partner overview](../jobin/readme-files/images/wireframe/partner_overview.png)
+![partner request details](../jobin/readme-files/images/wireframe/partner_request_details.png)
+
+### Workflow
+![workflow](../jobin/readme-files/workflow.png)
