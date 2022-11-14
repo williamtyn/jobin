@@ -1,0 +1,76 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <h3>
+            Order Overview
+        </h3>
+    </div>
+</div>
+<!-- Showing each active order as a collapse -->
+<div class="container">
+    <div class="row">
+        {% for order in order_list %}
+        <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="row">
+                        {{ order.title }}
+                    </div>
+                  </button>
+                </h5>
+              </div>
+          
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>Role</h5>
+                        {{ order.role }}
+                    </div>
+                    <div class="col-2">
+                        <h5>Period</h5>
+                        {{ order.period }}
+                    </div>
+                    <div class="col-2">
+                        <h5>Startdate</h5>
+                        {{ order.startdate }}
+                    </div>
+                    <div class="col-2">
+                        <h5>City</h5>
+                        {{ order.locality }}
+                    </div>
+                    <div class="col-2">
+                        <h5>Deadline</h5>
+                        {{ order.deadline }}
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-outline-success">Send Candidate</button>
+                    </div>
+                    </div>
+                    <br>
+                <div class="row">
+                <div class="col-4">
+                    <h5>Duties</h5>
+                    {{ order.duties }}
+                </div>
+                <div class="col-4">
+                    <h5>Requirements</h5>
+                    {{ order.requirements }}
+                </div>
+                <div class="col-4">
+                    <h5>Wishes</h5>
+                    {{ order.wishes }}
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
