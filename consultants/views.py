@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Order
+from django.views.generic import TemplateView
+from .models import Order, User
+from .forms import SignUpForm
 
 
 class OrderList(generic.ListView):
@@ -9,3 +11,5 @@ class OrderList(generic.ListView):
     template_name = 'orderlist.html'
 
 
+class HomeView(TemplateView):
+    template_name = 'index.html'

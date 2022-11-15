@@ -1,5 +1,63 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>This is the index.html page</p>
+<!--Header with hero image-->
+<header>
+      <!-- Hero image -->
+  <div id="hero-image" class="p-5 text-center bg-image">
+  <div class="overlay">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Find and compare the best consultants</h1>
+        <h4 class="mb-4">
+            Finding the right consultant is more difficult than ever.<br>
+            That's why we've made it simple.
+        </h4>
+        <a class="btn btn-outline-light btn-lg m-2" href="#"
+          role="button" rel="nofollow" target="_blank">Free Signup</a>
+        <a class="btn btn-outline-light btn-lg m-2" href="#"
+          target="_blank" role="button">Read more</a>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+<!--Icons with text-->
+<div class="container mt-5">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col text-center">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+            <h3 class="fs-2">Fill in the requirements</h3>
+            <p>Tell us what your requirements are and what you are searching for. You are up and running in 1 minute.</p>
+        </div>
+        <div class="feature col text-center">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <i class="fa-solid fa-desktop"></i>
+            </div>
+            <h3 class="fs-2">Candidates being presented</h3>
+            <p>Our partners present their best candidates to you. You see experience, skills, terms and prices.</p>
+        </div>
+        <div class="feature col text-center">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <h3 class="fs-2">Choose the very best</h3>
+            <p>Compare and find the candidates that suit you and your business best.</p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<!--Call to action with button-->
+<div class="container-fluid py-5 cta text-center">
+        <h3 class="display-5 fw-bold"></h3>
+        <p class="col-md-8 fs-4 offset-2">
+            Are you in need of a consultant?
+        </p>
+        <button class="btn btn-outline-light btn-lg m-2" type="button">Send request</button>
+</div>
 {%endblock%}
