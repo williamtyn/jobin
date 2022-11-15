@@ -3,19 +3,13 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
+    company = models.CharField(max_length=100, default='Company')
+    vat_no = models.IntegerField(default='000000')
     is_customer = models.BooleanField(default=False)
     is_partner = models.BooleanField(default=False)
 
-
-class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    company = models.CharField(max_length=100)
-
-
-class Partner(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    company = models.CharField(max_length=100)
-    vat_no = models.IntegerField()
+    def __str__(self):
+        return self.username
 
 
 # Set status of request if it is active or not due to deadline
