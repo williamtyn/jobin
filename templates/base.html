@@ -37,12 +37,16 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">See Orders</a>
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Overview</a>
+          </li>
           </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login / Register</button>
+            <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_logout' %}">Logout</a></button>
+          {% else %}
+            <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_login' %}">Login/Register</a></button>
+          {% endif %}
         </div>
     </nav>
 
