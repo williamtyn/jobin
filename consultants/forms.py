@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 
-from .models import User
+from .models import User, Order
 
 
 class SignUpForm(UserCreationForm):
@@ -17,3 +17,18 @@ class SignUpForm(UserCreationForm):
                   'email',
                   'company',
                   'vat_no', )
+
+
+class NewOrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ('title',
+                  'role',
+                  'period',
+                  'startdate',
+                  'locality',
+                  'duties',
+                  'requirements',
+                  'wishes',
+                  'deadline',
+                  )
