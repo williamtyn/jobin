@@ -3,10 +3,14 @@
 {% block content %}
 <div class="container mt-5">
     <div class="row">
-        <h3>
-            Order Overview
-        </h3>
+        <div class="col-md-10">
+            <h3>Active Requests</h3>
+            <p>See all active requests</p>
+        </div>
+        <div class="col-md-2">
+        </div>
     </div>
+    <hr>
 </div>
 <!-- Showing each active order as a collapse -->
 <div class="container">
@@ -69,6 +73,7 @@
             </div>
             </div>
         </div>
+        <br>
         {% endfor %}
     </div>
 </div>
