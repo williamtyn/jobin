@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, UpdateView
+from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Order, User
 from .forms import SignUpForm, NewOrderForm
@@ -29,11 +30,18 @@ class NewOrder(TemplateView):
         if form.is_valid():
             new_form = form.save(commit=False)
             new_form.responsible = request.user
-            new_form.save()
-            # added request.user.order.add(new_form)  
+            new_form.save() 
             return redirect('/user_orderlist/')
         else:
             return render(request, self.template_name, {'form': form})
+
+
+class EditOrder(UpdateView):
+    model = Order
+    fields = ['title', 'role', 'period', 'startdate', 'locality', 'duties', 
+              'requirements', 'wishes', 'deadline', 'status', ]
+    template_name = 'edit_order.html'
+    success_url = reverse_lazy('user_orderlist') 
 
 
 class UserOrderList(LoginRequiredMixin, TemplateView):
