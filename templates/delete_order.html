@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-5 offset-md-2 text-center">
+      <h3>Yor are about to delete this order</h3>
+
+        <p>This will be delete permanently! Are You Sure Want to Delete?</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 mt-2 text-center">
+        <form method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        </form>
+        <a href="/user_orderlist"><button class="btn btn-outline-dark">Cancel</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

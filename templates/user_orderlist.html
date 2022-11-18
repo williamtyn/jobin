@@ -55,7 +55,7 @@
                   </div>
                   <div class="col-2">
                       <a href="/edit/{{ order.id }}"><button type="button" class="btn btn-outline-success">Edit Request</button></a>
-                      <button type="button" class="btn btn-outline-danger">Delete</button>
+                      <a href="/delete/{{ order.id }}" onclick="confirmDelete()"><button type="button" class="btn btn-outline-danger">Delete</button></a>
                   </div>
                   </div>
                   <br>
