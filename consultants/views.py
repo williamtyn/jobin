@@ -39,7 +39,7 @@ class NewOrder(LoginRequiredMixin, TemplateView):
             new_form = form.save(commit=False)
             new_form.responsible = request.user
             new_form.save() 
-            return redirect('/user_orderlist/')
+            return redirect('/user_orderlist')
         else:
             return render(request, self.template_name, {'form': form})
 
