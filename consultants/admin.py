@@ -15,7 +15,8 @@ fields[1] = (
                                  'last_name',
                                  'email',
                                  'company',
-                                 'vat_no'
+                                 'vat_no',
+                                 'user_type'
                                  )})
 UserAdmin.fieldsets = tuple(fields)
 
