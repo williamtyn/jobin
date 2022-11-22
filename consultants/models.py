@@ -2,11 +2,14 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
+# Create custom user as customer or partner
 class User(AbstractUser):
+
+    CHOICES = ((0, 'Customer'), (1, 'Partner'))
+
+    user_type = models.IntegerField(choices=CHOICES, default=0)
     company = models.CharField(max_length=100, default='Company')
-    vat_no = models.IntegerField(default='000000')
-    is_customer = models.BooleanField(default=False)
-    is_partner = models.BooleanField(default=False)
+    vat_no = models.CharField(max_length=50, default='000000-0000')
 
     def __str__(self):
         return self.username
