@@ -22,7 +22,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
         <a class="navbar-brand" href="#">JobIn</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,15 +39,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
             </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="#">Overview</a>
-          </li>
           </ul>
+            {% if user.is_authenticated %}
+          <ul class="navbar-nav position-absolute end-0 mx-3">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'overview' %}">Overview</a>
+            </li>
             <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_logout' %}">Logout</a></button>
           {% else %}
             <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_login' %}">Login/Register</a></button>
           {% endif %}
+          </ul>
         </div>
     </nav>
 
