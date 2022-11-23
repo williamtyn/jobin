@@ -40,3 +40,9 @@ body {
 .cta p {
     color: white;
 }
+
+/* User_orderlist */
+.dividerline {
+    width: 70%;
+    margin: auto;
+}
