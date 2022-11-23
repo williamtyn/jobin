@@ -40,12 +40,23 @@
                 <a class="nav-link" href="#">About Us</a>
             </li>
           </ul>
-            {% if user.is_authenticated %}
+          <!-- Display navbar links for logged in Customers -->
+          {% if user.is_authenticated %}
+          {% if user.user_type == 0 %}
+          <ul class="navbar-nav position-absolute end-0 mx-3">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'user_orderlist' %}">Your Requests</a>
+            </li>
+            <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_logout' %}">Logout</a></button>
+          {% endif %}
+          <!-- Display navbar links for logged in Partners -->
+          {% if user.user_type == 1 %}
           <ul class="navbar-nav position-absolute end-0 mx-3">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'overview' %}">Overview</a>
             </li>
             <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_logout' %}">Logout</a></button>
+          {% endif %}
           {% else %}
             <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_login' %}">Login/Register</a></button>
           {% endif %}
