@@ -44,5 +44,4 @@ class CandidateForm(forms.ModelForm):
                   'price',
                   'cv',
                   'offer',
-                  'presented_date',
                   'order',)

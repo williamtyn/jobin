@@ -100,7 +100,9 @@ class NewCandidate(LoginRequiredMixin, CreateView):
         form = CandidateForm(request.POST, request.FILES)
 
         if form.is_valid():
-            form.save()
-            return redirect('orderlist.html')
+            new_form = form.save(commit=False)
+            new_form.manager = request.user
+            new_form.save()
+            return redirect('overview')
         else:
             return render(request, self.template_name, {'form': form})
