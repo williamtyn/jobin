@@ -55,7 +55,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/user_orderlist'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 MESSAGE_TAGS = {
@@ -69,6 +69,7 @@ MESSAGE_TAGS = {
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 AUTH_USER_MODEL = 'consultants.User'
+ACCOUNT_FORMS = {'signup': 'consultants.forms.SignUpForm'}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
