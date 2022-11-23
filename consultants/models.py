@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from cloudinary.models import CloudinaryField
 
 
 # Create custom user as customer or partner
@@ -41,3 +42,21 @@ class Order(models.Model):
 
     def __str__(self):
         return self.title
+
+
+# Model for partners to present candidates
+class Candidate(models.Model):
+    first_name = models.CharField(max_length=50)
+    summary = models.TextField()
+    price = models.CharField(max_length=50)
+    cv = CloudinaryField('cv')
+    offer = CloudinaryField('offer')
+    manager = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='presented_candidates')
+    presented_date = models.DateField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['presented_date', 'manager']
+
+    def __str__(self):
+        return f'Candidate {self.first_name} presented by {self.manager}'
