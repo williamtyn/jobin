@@ -1,7 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-
-from .models import User, Order
+from .models import User, Order, Candidate
 
 
 # Signup form for user to be flagged as customer or partner
@@ -33,5 +32,17 @@ class NewOrderForm(forms.ModelForm):
                   'duties',
                   'requirements',
                   'wishes',
-                  'deadline',
-                  )
+                  'deadline',)
+
+
+# Form for presenting candidate as Partner
+class CandidateForm(forms.ModelForm):
+    class Meta:
+        model = Candidate
+        fields = ('first_name',
+                  'summary',
+                  'price',
+                  'cv',
+                  'offer',
+                  'presented_date',
+                  'order',)
