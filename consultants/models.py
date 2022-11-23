@@ -54,6 +54,7 @@ class Candidate(models.Model):
     manager = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='presented_candidates')
     presented_date = models.DateField(auto_now_add=True)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, default="")
 
     class Meta:
         ordering = ['presented_date', 'manager']
