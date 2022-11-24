@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
-from django.views.generic import TemplateView, CreateView, UpdateView, DeleteView
+from django.views.generic import TemplateView, CreateView, UpdateView, DeleteView, ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Order, User
+from .models import Order, User, Candidate
 from .forms import SignUpForm, NewOrderForm, CandidateForm
 
 
@@ -33,7 +33,7 @@ class LogInView(TemplateView):
             return redirect('user_orderlist')
 
 
-# View for listing a user unique orders to template
+# View for listing a user unique orders and related candidates
 class UserOrderList(LoginRequiredMixin, TemplateView):
     template_name = 'user_orderlist.html'
 
@@ -41,8 +41,14 @@ class UserOrderList(LoginRequiredMixin, TemplateView):
         user = request.user
         user_orders = user.consultant_request.all()
 
+        candidates = Candidate.objects.all()
+        context = {
+         'user_orders': user_orders,
+         'candidates': candidates
+         }
+
         return render(
-            request, self.template_name, {'user_orders': user_orders})
+            request, self.template_name, context)
 
 
 # View for creating a new order for customer
