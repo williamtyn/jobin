@@ -29,12 +29,12 @@ class Order(models.Model):
     title = models.CharField(max_length=200)
     role = models.CharField(max_length=50)
     period = models.CharField(max_length=50)
-    startdate = models.DateTimeField()
+    startdate = models.DateField()
     locality = models.CharField(max_length=50)
     duties = models.TextField()
     requirements = models.TextField()
     wishes = models.TextField()
-    deadline = models.DateTimeField()
+    deadline = models.DateField()
     responsible = models.ForeignKey(
         User,
         on_delete=models.CASCADE, related_name='consultant_request')
@@ -53,7 +53,7 @@ class Candidate(models.Model):
     Model for partners to present candidates
     """
     first_name = models.CharField(max_length=50)
-    summary = models.TextField()
+    summary = models.CharField(max_length=100)
     price = models.CharField(max_length=50)
     cv = CloudinaryField('cv')
     offer = CloudinaryField('offer')
