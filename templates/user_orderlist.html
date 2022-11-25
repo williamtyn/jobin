@@ -18,9 +18,10 @@
 </div>
 <!-- Showing each customer order as a collapse -->
 <div class="container">
+  {% for order in user_orders %}
   <div class="row">
+    
     <div class="accordion" id="accordionExample">
-      {% for order in user_orders %}
       <div class="accordion-item">
         <!-- Order header/titel -->
         <h2 class="accordion-header" id="headingOne">
@@ -58,19 +59,15 @@
           </div>
           <br>
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-4">
               <h5>Duties</h5>
               {{ order.duties }}
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-4">
               <h5>Requirements</h5>
               {{ order.requirements }}
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-4">
               <h5>Wishes</h5>
               {{ order.wishes }}
             </div>
