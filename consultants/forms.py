@@ -3,8 +3,10 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import User, Order, Candidate
 
 
-# Signup form for user to be flagged as customer or partner
 class SignUpForm(UserCreationForm):
+    """
+    Signup form for user to be flagged as customer or partner
+    """
     company = forms.CharField(
         label='Company Name', max_length=50, min_length=2)
     vat_no = forms.CharField(max_length=50, label='Enter your VAT')
@@ -20,8 +22,10 @@ class SignUpForm(UserCreationForm):
                   'user_type',)
 
 
-# Form for user to create new order
 class NewOrderForm(forms.ModelForm):
+    """
+    Form for user to create new order
+    """
     class Meta:
         model = Order
         fields = ('title',
@@ -35,8 +39,10 @@ class NewOrderForm(forms.ModelForm):
                   'deadline',)
 
 
-# Form for presenting candidate as Partner
 class CandidateForm(forms.ModelForm):
+    """
+    Form for presenting candidate as Partner
+    """
     class Meta:
         model = Candidate
         fields = ('first_name',

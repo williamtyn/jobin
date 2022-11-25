@@ -1,19 +1,24 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
-from django.views.generic import TemplateView, CreateView, UpdateView, DeleteView, ListView
+from django.views.generic import TemplateView, CreateView, UpdateView, \
+                                 DeleteView, ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Order, User, Candidate
 from .forms import SignUpForm, NewOrderForm, CandidateForm
 
 
-# View for homepage
 class HomeView(TemplateView):
+    """
+    View for the homepage
+    """
     template_name = 'index.html'
 
 
-# View for signup as customer or partner
 class CustomerSignUpView(CreateView):
+    """
+    View for custom signup as a customer or partner
+    """
     model = User
     form_class = SignUpForm
     template_name = 'signup.html'
@@ -23,6 +28,9 @@ class CustomerSignUpView(CreateView):
 
 
 class LogInView(TemplateView):
+    """
+    View for redireting user based on which user type
+    """
     template_name = 'orderlist.html', 'user_orderlist.html'
 
     def login_success(request):
@@ -33,8 +41,10 @@ class LogInView(TemplateView):
             return redirect('user_orderlist')
 
 
-# View for listing a user unique orders and related candidates
 class UserOrderList(LoginRequiredMixin, TemplateView):
+    """
+    View for listing a user unique orders and related candidates
+    """
     template_name = 'user_orderlist.html'
 
     def get(self, request):
@@ -51,8 +61,10 @@ class UserOrderList(LoginRequiredMixin, TemplateView):
             request, self.template_name, context)
 
 
-# View for creating a new order for customer
 class NewOrder(LoginRequiredMixin, TemplateView):
+    """
+    View for creating a new order for customer
+    """
     template_name = 'new_order.html'
 
     def get(self, request):
@@ -71,8 +83,10 @@ class NewOrder(LoginRequiredMixin, TemplateView):
             return render(request, self.template_name, {'form': form})
 
 
-# View for user to edit a order
 class EditOrder(LoginRequiredMixin, UpdateView):
+    """
+    View for customer to edit a order
+    """
     model = Order
     fields = ['title', 'role', 'period', 'startdate', 'locality', 'duties',
               'requirements', 'wishes', 'deadline', 'status', ]
@@ -80,22 +94,28 @@ class EditOrder(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('user_orderlist')
 
 
-# View for user to delete order
 class DeleteOrder(LoginRequiredMixin, DeleteView):
+    """
+    View for user to delete order
+    """
     model = Order
     template_name = 'delete_order.html'
     success_url = reverse_lazy('user_orderlist')
 
 
-# View for listing all active orders for partners to see
 class OrderList(generic.ListView):
+    """
+    View for listing all active orders for partners to see
+    """
     model = Order
     queryset = Order.objects.filter(status=0).order_by('created_date')
     template_name = 'orderlist.html'
 
 
-# View for Partner to present a candidate on active order
 class NewCandidate(LoginRequiredMixin, CreateView):
+    """
+    View for Partner to present a candidate on active order
+    """
     template_name = 'new_candidate.html'
 
     def get(self, request):

@@ -3,8 +3,10 @@ from django.contrib.auth.models import AbstractUser
 from cloudinary.models import CloudinaryField
 
 
-# Create custom user as customer or partner
 class User(AbstractUser):
+    """
+    Create custom user as customer or partner
+    """
 
     CHOICES = ((0, 'Customer'), (1, 'Partner'))
 
@@ -20,8 +22,10 @@ class User(AbstractUser):
 STATUS = ((0, 'Active'), (1, 'Inactive'))
 
 
-# Content in every request
 class Order(models.Model):
+    """
+    Data that is being stored for every order created
+    """
     title = models.CharField(max_length=200)
     role = models.CharField(max_length=50)
     period = models.CharField(max_length=50)
@@ -44,8 +48,10 @@ class Order(models.Model):
         return self.title
 
 
-# Model for partners to present candidates
 class Candidate(models.Model):
+    """
+    Model for partners to present candidates
+    """
     first_name = models.CharField(max_length=50)
     summary = models.TextField()
     price = models.CharField(max_length=50)
