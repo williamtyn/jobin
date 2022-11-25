@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
 <div class="container mt-5">
@@ -16,66 +16,70 @@
 <div class="container">
     <div class="row">
         {% for order in order_list %}
-        <div id="accordion">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <div class="row">
+        <div class="accordion" id="accordionExample">
+            <!-- Order header/titel -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#ord{{ order.id }}" aria-expanded="true" aria-controls="collapseOne">
                         {{ order.title }}
-                    </div>
-                  </button>
-                </h5>
-              </div>
-          
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-2">
-                        <h5>Role</h5>
-                        {{ order.role }}
-                    </div>
-                    <div class="col-2">
-                        <h5>Period</h5>
-                        {{ order.period }}
-                    </div>
-                    <div class="col-2">
-                        <h5>Startdate</h5>
-                        {{ order.startdate }}
-                    </div>
-                    <div class="col-2">
-                        <h5>City</h5>
-                        {{ order.locality }}
-                    </div>
-                    <div class="col-2">
-                        <h5>Deadline</h5>
-                        {{ order.deadline }}
-                    </div>
-                    <div class="col-2">
-                        <a href="{% url 'new-candidate' %}"><button class="btn btn-success">Send Candidate</button></a>
-                    </div>
+                    </button>
+                </h2>
+            </div>
+            <!-- Order body -->
+            <div id="ord{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="container accordion-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-2">
+                            <h5>Role</h5>
+                            {{ order.role }}
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <h5>Period</h5>
+                            {{ order.period }}
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <h5>Startdate</h5>
+                            {{ order.startdate }}
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <h5>City</h5>
+                            {{ order.locality }}
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <h5>Deadline</h5>
+                            {{ order.deadline }}
+                        </div>
                     </div>
                     <br>
-                <div class="row">
-                <div class="col-4">
-                    <h5>Duties</h5>
-                    {{ order.duties }}
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <h5>Duties</h5>
+                            {{ order.duties }}
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <h5>Requirements</h5>
+                            {{ order.requirements }}
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <h5>Wishes</h5>
+                            {{ order.wishes }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <br>
+                            <a href="{% url 'new-candidate' %}"><button class="btn btn-success">Send
+                                    Candidate</button></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <h5>Requirements</h5>
-                    {{ order.requirements }}
-                </div>
-                <div class="col-4">
-                    <h5>Wishes</h5>
-                    {{ order.wishes }}
-                </div>
-                </div>
-            </div>
             </div>
         </div>
-        <br>
         {% endfor %}
     </div>
+    
 </div>
 
 {% endblock content %}
