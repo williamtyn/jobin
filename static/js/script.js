@@ -5,4 +5,9 @@ setTimeout(function() {
     alert.close();
 }, 3000)
 
+// Show/Hide candidates in order
+const toggleCandidates = (e) => {
+    const sibling = e.target.closest('div');
+    sibling.nextElementSibling.classList.toggle('toggle');
+    }
 

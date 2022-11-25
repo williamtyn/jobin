@@ -46,3 +46,15 @@ body {
     width: 70%;
     margin: auto;
 }
+
+.toggle {
+    display: none;
+}
+
+.accordion-item {
+    border: 0;
+}
+
+.card {
+    border: 0;
+}

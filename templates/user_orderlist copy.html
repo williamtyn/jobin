@@ -1,0 +1,138 @@
+{% extends 'base.html' %} 
+{% load cloudinary %}  
+{% load static %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-10">
+            <h3>Your Request Overview</h3>
+            <p>Manage your active requests</p>
+        </div>
+        <div class="col-md-2">
+            <br>
+            <a href="/new_order"><button class="btn btn-success">New Request</button></a>
+        </div>
+    </div>
+    <hr>
+</div>
+<!-- Showing each customer order as a collapse -->
+<div class="container">
+  <div class="row">
+    {% for order in user_orders %}
+      <div id="accordion">
+          <div class="card">
+            <!-- Order header/titel -->
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="row">
+                    {{ order.title }} 
+                </div>
+                </button>
+              </h5>
+            </div>
+          <!-- Order body -->
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+              <div class="row">
+                  <div class="col-2">
+                      <h5>Role</h5>
+                      {{ order.role }}
+                  </div>
+                  <div class="col-2">
+                      <h5>Period</h5>
+                      {{ order.period }}
+                  </div>
+                  <div class="col-2">
+                      <h5>Startdate</h5>
+                      {{ order.startdate }}
+                  </div>
+                  <div class="col-2">
+                      <h5>City</h5>
+                      {{ order.locality }}
+                  </div>
+                  <div class="col-2">
+                      <h5>Deadline</h5>
+                      {{ order.deadline }}
+                  </div>
+                  <div class="col-2">
+                      <a href="/edit/{{ order.id }}"><button type="button" class="btn btn-outline-success">Edit Request</button></a>
+                      <a href="/delete/{{ order.id }}" onclick="confirmDelete()"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+                  </div>
+                  </div>
+                  <br>
+                <div class="row">
+                <div class="col-4">
+                    <h5>Duties</h5>
+                    {{ order.duties }}
+                </div>
+                <div class="col-4">
+                    <h5>Requirements</h5>
+                    {{ order.requirements }}
+                </div>
+                <div class="col-4">
+                    <h5>Wishes</h5>
+                    {{ order.wishes }}
+                </div>
+              </div>
+              <br>
+              <hr class="dividerline">
+              <br>
+              <!-- Showing each candidate presented from Partner -->
+              <div class="col-12 text-center">
+                  <h5>Candidates</h5>
+                  <button type="button" onclick="toggleCandidates(event)" class="btn btn-outline-success">Show Candidates</button>
+                  <br>
+                  <br>
+              </div>
+              <div class="row toggle">
+                <!-- Check if model have any candidates presented otherwise displaying else statement -->
+                {% if order.candidate_set.all.count > 0 %}
+                {% for candidate in order.candidate_set.all %}
+                  <div class="col-6 offset-3 text-center">
+                    <div class="card" >
+                      <div class="card-body">
+                        <h5 class="card-title">{{ candidate.first_name }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ candidate.price }}</h6>
+                        <p class="card-text">{{ candidate.summary }}</p>
+                        <a href="{{ candidate.cv.url }}" target="_blank" class="card-link"><button type="button" class="btn btn-success">See CV</button></a>
+                        <a href="{{ candidate.offer.url }}" class="card-link"><button type="button" class="btn btn-outline-success">See Offer</button></a>
+                        <a href="mailto:{{ candidate.manager.email }}" class="card-link"><button type="button" class="btn btn-outline-dark">Contact Manager</button></a>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                {% endfor %}
+                {% else %}
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      <p><i>No candidates have been presented yet</i></p>
+                    </div>
+                  </div>
+                {% endif %}
+                </div>
+              </div>
+          </div>
+          </div>
+      </div>
+      <br>
+      {% endfor %}
+  </div>
+</div> 
+
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
+
+{% endblock content %}
