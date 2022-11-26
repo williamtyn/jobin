@@ -28,6 +28,13 @@ class NewOrderForm(forms.ModelForm):
     """
     Form for user to create new order
     """
+    startdate = forms.DateField(label='Startdate if hired (YYYY-MM-DD)')
+    deadline = forms.DateField(label='Candidate Deadline (YYYY-MM-DD)')
+    duties = forms.CharField(label='Describe the consultant duties')
+    wishes = forms.CharField(label='What else do you wish for?')
+    requirements = forms.CharField(
+        label='What requirements do you have? Education/Qualification')
+
     class Meta:
         model = Order
         fields = ('title',
