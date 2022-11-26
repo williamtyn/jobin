@@ -19,7 +19,9 @@ class SignUpForm(UserCreationForm):
                   'email',
                   'company',
                   'vat_no',
-                  'user_type',)
+                  'user_type',
+                  'first_name',
+                  'phone',)
 
 
 class NewOrderForm(forms.ModelForm):

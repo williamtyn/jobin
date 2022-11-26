@@ -70,6 +70,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 AUTH_USER_MODEL = 'consultants.User'
 ACCOUNT_FORMS = {'signup': 'consultants.forms.SignUpForm'}
+DEFAULT_FROM_EMAIL = 'test@mail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

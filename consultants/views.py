@@ -4,6 +4,7 @@ from django.views.generic import TemplateView, CreateView, UpdateView, \
                                  DeleteView, ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
+from allauth.account.forms import SignupForm
 from .models import Order, User, Candidate
 from .forms import SignUpForm, NewOrderForm, CandidateForm
 
@@ -15,7 +16,7 @@ class HomeView(TemplateView):
     template_name = 'index.html'
 
 
-class CustomerSignUpView(CreateView):
+class CustomSignUpView(SignupForm):
     """
     View for custom signup as a customer or partner
     """

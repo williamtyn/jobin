@@ -13,6 +13,7 @@ class User(AbstractUser):
     user_type = models.IntegerField(choices=CHOICES, default=0)
     company = models.CharField(max_length=100, default='Company')
     vat_no = models.CharField(max_length=50, default='000000-0000')
+    phone = models.IntegerField(default=0)
 
     def __str__(self):
         return self.username
