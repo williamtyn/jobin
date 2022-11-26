@@ -42,3 +42,10 @@ Mats is satisfied.
 ### Database schema
 #### Order
 ![database](../jobin/readme-files/order_database_schema.png)
+
+
+### Bugs
+* Rediricting to right page when user have logged in
+
+#### Resolved Bugs
+* Toggle collapse inside a for loop in template
