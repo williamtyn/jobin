@@ -3,12 +3,34 @@ body {
     padding-bottom: 70px;
 }
 
-.custom-button a {
-    text-decoration: none;
-    color: grey;
+/* index.html */
+
+/* Navbar */
+.navbar-brand {
+    color:#de6000;
+    font-size: x-large;
 }
 
-/* index.html */
+.navbar-brand:hover {
+    color: #de6000;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: #de6000;
+}
+
+.custom-button a {
+    text-decoration: none;
+    color: #198754;
+}
+
+.custom-button a:hover {
+    color: white;
+}
 
 /* Hero image */
 #hero-image {

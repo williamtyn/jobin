@@ -20,22 +20,23 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
-        <a class="navbar-brand" href="#">JobIn</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg position-relative">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">JobIn</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Step-by-step</a>
+              <a class="nav-link" id="step-by-step">Step-by-step</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" id="about-us">About Us</a>
             </li>
           </ul>
           <!-- Display navbar links for logged in Customers -->
@@ -56,16 +57,17 @@
             <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_logout' %}">Logout</a></button>
           {% endif %}
           {% else %}
-            <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_login' %}">Login/Register</a></button>
+            <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a href="{% url 'account_login' %}" class="link-in-button">Login/Register</a></button>
           {% endif %}
           </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Messages to user -->
     <div class="container">
       <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-12">
             {% for message in messages %}
             <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
               {{ message | safe }}
