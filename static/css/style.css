@@ -61,10 +61,20 @@ body {
 
 /* Call to action with button */
 .cta {
-    background-color: darkgrey;
-    background-position: center;
+    background-image: url('../images/homepage_partner.webp');
+    background-color: #de6000;
+    background-position: 30% 30%;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 400px;
+}
+
+.cta-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .cta p {
