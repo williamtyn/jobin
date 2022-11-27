@@ -54,7 +54,7 @@ class Candidate(models.Model):
     Model for partners to present candidates
     """
     first_name = models.CharField(max_length=50)
-    summary = models.CharField(max_length=100)
+    summary = models.CharField(max_length=200)
     price = models.CharField(max_length=50)
     cv = CloudinaryField('cv')
     offer = CloudinaryField('offer')
