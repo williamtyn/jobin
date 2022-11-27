@@ -12,6 +12,7 @@ class SignUpForm(UserCreationForm):
     vat_no = forms.CharField(max_length=50, label='Enter your VAT')
     CHOICES = ((0, 'Customer'), (1, 'Partner'))
     user_type = forms.ChoiceField(widget=forms.Select, choices=CHOICES)
+    email = forms.CharField(max_length=75, required=True)
 
     class Meta(UserCreationForm.Meta):
         model = User
