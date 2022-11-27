@@ -7,6 +7,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from allauth.account.forms import SignupForm
 from .models import Order, User, Candidate
 from .forms import SignUpForm, NewOrderForm, CandidateForm
+from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 
 class HomeView(TemplateView):
@@ -79,6 +81,7 @@ class NewOrder(LoginRequiredMixin, TemplateView):
             new_form = form.save(commit=False)
             new_form.responsible = request.user
             new_form.save()
+            messages.success(request, 'Your request is successfully published')
             return redirect('/user_orderlist')
         else:
             return render(request, self.template_name, {'form': form})
@@ -94,6 +97,11 @@ class EditOrder(LoginRequiredMixin, UpdateView):
     template_name = 'edit_order.html'
     success_url = reverse_lazy('user_orderlist')
 
+    def form_valid(self, form):
+        form.save()
+        messages.warning(self.request, 'Your request have been edited')
+        return HttpResponseRedirect(self.get_success_url())
+
 
 class DeleteOrder(LoginRequiredMixin, DeleteView):
     """
@@ -102,6 +110,12 @@ class DeleteOrder(LoginRequiredMixin, DeleteView):
     model = Order
     template_name = 'delete_order.html'
     success_url = reverse_lazy('user_orderlist')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.delete()
+        messages.warning(self.request, 'Your request have been deleted')
+        return HttpResponseRedirect(self.get_success_url())
 
 
 class OrderList(generic.ListView):
@@ -130,6 +144,7 @@ class NewCandidate(LoginRequiredMixin, CreateView):
             new_form = form.save(commit=False)
             new_form.manager = request.user
             new_form.save()
+            messages.success(request, 'Your candidate have been presented')
             return redirect('overview')
         else:
             return render(request, self.template_name, {'form': form})
