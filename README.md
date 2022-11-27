@@ -49,3 +49,13 @@ Mats is satisfied.
 
 #### Resolved Bugs
 * Toggle collapse inside a for loop in template
+* Change of toggler color icon for Bootstrap navbar
+I struggled a lot with changing color of the toggler icon inte the navbar. Then i found [This](https://www.folkstalk.com/2022/09/bootstrap-navbar-toggler-icon-color-with-code-examples.html) and understod that I needed to change the url for the icon.
+
+
+### Technologies Used
+https://www.simpleimageresizer.com/
+
+### Sources
+#### Images
+[Homepage Partner]https://www.pexels.com/sv-se/foto/manniskor-barbar-dator-sitter-mote-4340139/
