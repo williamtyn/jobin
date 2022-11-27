@@ -34,14 +34,12 @@ class LogInView(TemplateView):
     """
     View for redireting user based on which user type
     """
-    template_name = 'orderlist.html', 'user_orderlist.html'
-
     def login_success(request):
         user = request.user
         if user.user_type == 1:
-            return redirect('overview')
-        else:
-            return redirect('user_orderlist')
+            return HttpResponseRedirect('overview')
+        elif user.user_type == 0:
+            return HttpResponseRedirect('user_orderlist')
 
 
 class UserOrderList(LoginRequiredMixin, TemplateView):
@@ -118,7 +116,7 @@ class DeleteOrder(LoginRequiredMixin, DeleteView):
         return HttpResponseRedirect(self.get_success_url())
 
 
-class OrderList(generic.ListView):
+class OrderList(LoginRequiredMixin, generic.ListView):
     """
     View for listing all active orders for partners to see
     """
