@@ -3,7 +3,7 @@ body {
     padding-bottom: 70px;
 }
 
-/* index.html */
+/* base.html */
 
 /* Navbar */
 .navbar-brand {
@@ -40,6 +40,7 @@ body {
     border-color: rgba(222, 96, 0, 1);
 } 
 
+/* index-html */
 /* Hero image */
 #hero-image {
     background-image: url('../images/hero_image.webp');
@@ -81,6 +82,16 @@ body {
     color: white;
 }
 
+#scrollbtn {
+    background-color:#de6000;
+    position: fixed;
+    bottom: 56px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    border-radius: 50%;
+}
+
 /* User_orderlist */
 .dividerline {
     width: 70%;
@@ -103,7 +114,13 @@ body {
 .socials {
     font-size: 200%;
     text-align: center;
-    background-color: #fff;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.socials ul {
+    
 }
 
 .socials a {
