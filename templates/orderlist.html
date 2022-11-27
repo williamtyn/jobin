@@ -13,6 +13,7 @@
     <hr>
 </div>
 <!-- Showing each active order as a collapse -->
+{% if user.is_authenticated and user.user_type == 1 %}
 <div class="container">
     <div class="row">
         {% for order in order_list %}
@@ -79,7 +80,14 @@
         </div>
         {% endfor %}
     </div>
-    
 </div>
-
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            You need to be a partner to have access to this page
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock content %}

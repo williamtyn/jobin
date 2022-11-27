@@ -78,7 +78,7 @@
               <br>
               <a href="/edit/{{ order.id }}"><button type="button" class="btn btn-outline-success">Edit
                   Request</button></a>
-              <a href="/delete/{{ order.id }}" onclick="confirmDelete()"><button type="button"
+              <a href="/delete/{{ order.id }}"><button type="button"
                   class="btn btn-outline-danger">Delete</button></a>
             </div>
           </div>
@@ -106,7 +106,7 @@
                 <p class="card-text">{{ candidate.summary }}</p>
                 <a href="{{ candidate.cv.url }}" target="_blank" class="card-link"><button type="button"
                     class="btn btn-success">See CV</button></a>
-                <a href="{{ candidate.offer.url }}" class="card-link"><button type="button"
+                <a href="{{ candidate.offer.url }}" target="_blank" class="card-link"><button type="button"
                     class="btn btn-outline-success">See Offer</button></a>
                 <a href="mailto:{{ candidate.manager.email }}" class="card-link"><button type="button"
                     class="btn btn-outline-dark">Contact Manager</button></a>

@@ -13,7 +13,7 @@
     <hr>
 </div>
 <!-- Form for presenting a new candidate as partner -->
-{% if user.is_authenticated %}
+{% if user.is_authenticated and user.user_type == 1 %}
 <div class="container">
     <div class="row">
             <form method="post" enctype="multipart/form-data" style="margin-top: 1.3em;">
@@ -28,6 +28,12 @@
 </div>
 <br>
 {% else %}
-<div>You need to present a candidate</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            You need to be a partner to have access to this page
+        </div>
+    </div>
+</div>
 {% endif %}
 {% endblock content %}
