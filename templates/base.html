@@ -44,7 +44,7 @@
         <!-- Display navbar links for logged in Customers -->
         {% if user.is_authenticated %}
         {% if user.user_type == 0 %}
-        <ul class="navbar-nav position-absolute end-0 mx-3">
+        <ul class="navbar-nav end-0 mx-3 nav-logedin">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'user/overview' %}">Your Requests</a>
           </li>
@@ -53,7 +53,7 @@
           {% endif %}
           <!-- Display navbar links for logged in Partners -->
           {% if user.user_type == 1 %}
-          <ul class="navbar-nav position-absolute end-0 mx-3">
+          <ul class="navbar-nav end-0 mx-3 nav-logedin">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'overview' %}">Overview</a>
             </li>

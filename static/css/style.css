@@ -127,3 +127,15 @@ body {
 .socials > li {
     display: inline;
 }
+
+#showfooter {
+    display: none;
+}
+
+/* Remove position absolute to display logged in navbar */
+@media screen and (min-width: 991px) {
+
+.nav-logedin {
+    position: absolute;
+}
+}
