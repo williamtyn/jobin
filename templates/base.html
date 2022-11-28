@@ -58,12 +58,10 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'overview' %}">Overview</a>
             </li>
-            <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a
-                href="{% url 'account_logout' %}">Logout</a></button>
+            <a class="btn btn-outline-success my-2 my-sm-0 custom-button" href="{% url 'account_logout' %}">Logout</a>
             {% endif %}
             {% else %}
-            <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a
-                href="{% url 'account_login' %}" class="link-in-button">Login/Register</a></button>
+            <a href="{% url 'account_login' %}" class="link-in-button btn btn-outline-success my-2 my-sm-0 custom-button">Login/Register</a>
             {% endif %}
           </ul>
       </div>
@@ -116,6 +114,6 @@
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/689aa347cf.js" crossorigin="anonymous"></script>
 <!-- Custom script.js -->
-<script src="{% static './js/script.js' %}" type="text/javascript"></script>
+<script src="{% static './js/script.js' %}"></script>
 
 </html>
