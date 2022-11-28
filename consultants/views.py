@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.views.generic import TemplateView, CreateView, UpdateView, \
-                                 DeleteView, ListView
+                                 DeleteView, ListView, View
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from allauth.account.forms import SignupForm
@@ -30,16 +30,17 @@ class CustomSignUpView(SignupForm):
         user = form.save()
 
 
-class LogInView(TemplateView):
+class LogInView(View):
     """
-    View for redireting user based on which user type
+    View for redirecting user based on which user type
     """
-    def login_success(request):
+
+    def get(self, request, *args, **kwargs):
         user = request.user
         if user.user_type == 1:
-            return HttpResponseRedirect('overview')
-        elif user.user_type == 0:
-            return HttpResponseRedirect('user_orderlist')
+            return redirect('overview')
+        else:
+            return redirect('user/overview')
 
 
 class UserOrderList(LoginRequiredMixin, TemplateView):
