@@ -56,7 +56,10 @@ I struggled a lot with changing color of the toggler icon inte the navbar. Then 
 
 
 ### Technologies Used
-https://www.simpleimageresizer.com/
+https://www.simpleimageresizer.com/ - For making images smaller
+https://pagespeed.web.dev/ - For checking Pagespeed Insights
+https://miniwebtool.com/django-secret-key-generator/ - For generating Django secret key
+https://cloudinary.com/ - For cloudstoring of pdf that is being saved to the database
 
 ### Sources
 #### Images
