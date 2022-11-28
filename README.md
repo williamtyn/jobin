@@ -49,6 +49,8 @@ Mats is satisfied.
 
 #### Resolved Bugs
 * Toggle collapse inside a for loop in template
+* Navbar links on mobile
+* Redirect logedin user based on user type
 * Change of toggler color icon for Bootstrap navbar
 I struggled a lot with changing color of the toggler icon inte the navbar. Then i found [This](https://www.folkstalk.com/2022/09/bootstrap-navbar-toggler-icon-color-with-code-examples.html) and understod that I needed to change the url for the icon.
 
