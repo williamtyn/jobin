@@ -64,7 +64,7 @@ body {
 
 /* Call to action with button */
 .cta {
-    background-image: url('https://www.res.cloudinary.com/dpliee0fu/image/upload/v1669651153/homepage_partner_ddvmfr.webp');
+    background-image: url('https://res.cloudinary.com/dpliee0fu/image/upload/v1669651153/homepage_partner.webp');
     background-color: #de6000;
     background-position: 30% 30%;
     background-repeat: no-repeat;
@@ -92,6 +92,16 @@ body {
     z-index: 99;
     border: none;
     border-radius: 50%;
+}
+
+/* Signup template */
+
+.helptext {
+    display: none;
+}
+
+.signup li {
+    display: none;
 }
 
 /* User_orderlist */
