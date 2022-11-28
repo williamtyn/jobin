@@ -10,7 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -47,7 +46,7 @@
         {% if user.user_type == 0 %}
         <ul class="navbar-nav position-absolute end-0 mx-3">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'user_orderlist' %}">Your Requests</a>
+            <a class="nav-link" href="{% url 'user/overview' %}">Your Requests</a>
           </li>
           <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a
               href="{% url 'account_logout' %}">Logout</a></button>

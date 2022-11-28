@@ -80,7 +80,7 @@ class NewOrder(LoginRequiredMixin, TemplateView):
             new_form.responsible = request.user
             new_form.save()
             messages.success(request, 'Your request is successfully published')
-            return redirect('/user_orderlist')
+            return redirect('/user/overview')
         else:
             return render(request, self.template_name, {'form': form})
 
@@ -93,7 +93,7 @@ class EditOrder(LoginRequiredMixin, UpdateView):
     fields = ['title', 'role', 'period', 'startdate', 'locality', 'duties',
               'requirements', 'wishes', 'deadline', 'status', ]
     template_name = 'edit_order.html'
-    success_url = reverse_lazy('user_orderlist')
+    success_url = reverse_lazy('user/overview')
 
     def form_valid(self, form):
         form.save()
@@ -107,7 +107,7 @@ class DeleteOrder(LoginRequiredMixin, DeleteView):
     """
     model = Order
     template_name = 'delete_order.html'
-    success_url = reverse_lazy('user_orderlist')
+    success_url = reverse_lazy('user/overview')
 
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
