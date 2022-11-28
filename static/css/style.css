@@ -33,6 +33,7 @@ body {
     color: white;
 }
 
+/* Change the bootstrap default toggler color */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(222, 96, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -44,7 +45,7 @@ body {
 /* index-html */
 /* Hero image */
 #hero-image {
-    background-image: url('../images/hero_image.webp');
+    background-image: url('https://res.cloudinary.com/dpliee0fu/image/upload/v1669651151/hero_image.webp');
     height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,7 +64,7 @@ body {
 
 /* Call to action with button */
 .cta {
-    background-image: url('../images/homepage_partner.webp');
+    background-image: url('https://www.res.cloudinary.com/dpliee0fu/image/upload/v1669651153/homepage_partner_ddvmfr.webp');
     background-color: #de6000;
     background-position: 30% 30%;
     background-repeat: no-repeat;
