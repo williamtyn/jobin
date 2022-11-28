@@ -1,9 +1,74 @@
+# Portfolio Project 4 - Fullstack Full-Stack Toolkit
+
+## JObIn - Compare and find the best consultants for your company!
+
 Finding the right consultant is more difficult than ever. That's why we've made it simple.
 
-This is how easily it works!
+### This is how easily it works!
 1. Simply create a request for the consultant you are looking for.
 2. Our partners present the best consultants to you.
 3. Compare consultants and choose the one that is best for your organization.
+
+![Image mockup of the website in a computer, tablet and phone](image goes here)
+
+## Live Site
+[Go to site](www.website.com) 
+
+## Repository
+[View repository](www.website.com)
+
+---
+
+## Catalouge
+<li><a href="#target-group">Target Group</a></li>
+<li><a href="#user-experince">UXD - User Experince Design</a></li>
+<ul><li><a href="#storytelling">Storytelling</a></li>
+<li><a href="#wireframe">Wireframe</a></li>
+<ul><li><a href="w1">Homepage, Sign up, Log in</a></li>
+<li><a href="#w2">Customer signed in</a></li>
+<li><a href="#w3">Partner signed in</a></li></ul>
+</ul>
+<li><a href="#flowchart">Flowchart</a></li>
+<li><a href="#user-stories">User Stories</a></li>
+
+<li><a href="#rules">The Surface Plane</a></li>
+<ul><li><a href="#base">Base</a></li>
+<li><a href="#homepage">Homepage</a></li>
+<li><a href="#signup">Signup</a></li>
+<li><a href="#login">Login</a></li>
+<li><a href="#customer-overview">Customer Overview</a></li>
+<ul><li><a href="#customer-new">New Request</a></li>
+<li><a href="#customer-edit">Edit Request</a></li>
+<li><a href="#customer-delete">Delete Request</a></li>
+<li><a href="#customer-candidate">See Candidates</a></li></ul>
+<ul><li><a href="#partner-overview">Partner Overview</a></li>
+<li><a href="#partner-new">Send Candidate</a></ul>
+</ul>
+<li><a href="#bugs">Bugs</a></li>
+<ul><li><a href="#solved-bugs">Solved Bugs</a></li></ul>
+<li><a href="#future-features">Future features</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#deployment">Deployment</a></li>
+<li><a href="#credits">Credits</a></li>
+<ul><li><a href="#code-issues">Issues with code</a></li>
+<li><a href="#student-support">Student Support</a></li>
+<li><a href="#code">Code</a></li></ul>
+<li><a href="#acknowledgements">Acknowledgements</a></li></ul>
+
+---
+
+<h2 id="target-group">Target Group</h2>
+The JobIn Applications have two target groups, customers and partners.
+By focusing marketing on customers, we are confident that we will attract many partners to our application. consulting companies are always looking for new business opportunities and those opportunities are with us when customers post requests in our application
+
+### Customers
+The consultant industry have annual turnover of trillions of dollars worldwide. Companies in almost every country in the world is spending money in consulting hours, many of them with low satisfaction. jobin is an application for the thousands of companies that want to find the absolute best quality of the consultants they invest in, by comparing their options before making a decision.
+
+### Partners
+In Sweden, two new consulting companies are registered a week (statistics from 2021). There have never been so many companies fighting for the same customers. With our application, our partners can focus on their core business, hiring quality consultants, instead of having to spend time selling their services to clients. Whoever has the best consultant gets to deliver
+
+<h2 id="flowchart">Flowchart</h2> 
 
 ## The story of Mats and The Factory
 Mats is a hard-working manager at Svenska Industrigruppen AB.
