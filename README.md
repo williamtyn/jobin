@@ -46,6 +46,8 @@ Mats is satisfied.
 
 ### Bugs
 * Rediricting to right page when user have logged in
+* Login confirmation message do not dissapear when user have been logged in after signing up.
+* Internal navbar links (Why Us and Step-by-step) is not accessable when user have logged in.
 
 #### Resolved Bugs
 * Toggle collapse inside a for loop in template
