@@ -9,10 +9,10 @@ Finding the right consultant is more difficult than ever. That's why we've made 
 2. Our partners present the best consultants to you.
 3. Compare consultants and choose the one that is best for your organization.
 
-![Image mockup of the website in a computer, tablet and phone](image goes here)
+![Image mockup of the website in a computer, tablet and phone](../jobin/readme-files/jobin_mockup.png)
 
 ## Live Site
-[Go to site](www.website.com) 
+[Go to site](https://jobin-compare-consultants.herokuapp.com/) 
 
 ## Repository
 [View repository](www.website.com)
@@ -84,9 +84,75 @@ Already at lunch the next day, Mats has received two notices that there are cand
 Over the course of a few days, he receives more candidates on the website, and he chooses to meet a few more. Within 14 days, Mats has managed to find five consultants who enable the factory to deliver at the highest possible capacity. 
 Mats is satisfied.
 
+## User Stories
+
+1. As a User I can register an account so that I can make a consultant request for my company.
+Acceptance Criteria 1: I can register account with my email and own password.
+Acceptance Criteria 2: I can fill in the details of my company as company name and vat number.
+
+2. As a User I can make a consultant request so that partners know what I am searching for
+Acceptance Criteria 1: The information that i can fill in is: Title, role, period, startdate, locality, duties, demands, wishes and deadline.
+Acceptance Criteria 2: Startdate and deadline must be displayed with month, date, year.
+
+3. As a User I can see all my requests in an overview so that I have control and know the status of the requests
+Acceptance Criteria 1: When logging in i get redirected to the overview page.
+Acceptance Criteria 2: In the overview i can see all my requests.
+Acceptance Criteria 3: In every request i can see presented candidates.
+
+4. As a User I can see when a partner has presented a consultant so that I can decide if I want to schedule an interview with the consultant
+Acceptance Criteria 1: In the overview I can see how many candidates that have been presented for the specific request.
+Acceptance Criteria 2: In request details I can see the presented candidate with name, price, summary, cv and offer.
+Acceptance Criteria 3: I can also contact the manager by email.
+
+5. As a User I can see contact information for the manager so that I can schedule an interview with the manager/consultant
+Acceptance Criteria 1: When a candidate is presented I can contact the manager bu email for schedule an interview.
+
+6. As a Partner I can register an account so that I can see consultant requests from companies
+Acceptance Criteria 1: Register account with my own password.
+Acceptance Criteria 2: Add details of my company with company name and vat number.
+
+7. As a Partner I can see the details of the request so that I can present the right consultant
+Acceptance Criteria 1: When I click the request i can see details about what the company is asking for.
+
+8. As a Partner I can present a consultant with their CV, price, and conditions so that I can show the company that we have a solution for them
+Acceptance Criteria 1: On the request details i can choose to present a candidate.
+Acceptance Criteria 2: I can upload CV and offer in pdf format.
+Acceptance Criteria 3: I can fill in the price for consultant by the hour.
+
+9. As a Admin I can view details about users and partners so that I know who uses our tool
+Acceptance Criteria 1: In adminpanel i can see a list of all registered accounts.
+Acceptance Criteria 2: If i click on the account i can see if they are a user or partner.
+
+10. As a Admin I can see a full list of ongoing requests so that I can contact new companies that may have these consultants
+Acceptance Criteria 1: In adminpanel i can see a list of every request in the database.
+Acceptance Criteria 2: I can see every detail of the request including contact information.
+
+14. As a User/Partner I can see information about the website/tool so that I understand why i should register an account
+Acceptance Criteria 1: When i go to the homepage I can see information about the service Immediately.
+Acceptance Criteria 2: The homepage is user-friendly and i understand the content and information.
+
+15. As a User I can Edit my requests so that the request displays the correct information in case of some changes are made
+Acceptance Criteria 1: On the overview I can click on changing the request.
+Acceptance Criteria 2: The change are made immediately and updates my request.
+
+16. As a User I can delete my request so that partners do not spend time presenting candidates if we have already found what we are looking for
+Acceptance Criteria 1: On the overview I can click on delete the request.
+Acceptance Criteria 2: The change are made immediately and deletes my request.
+
+### User Stories not done
+11. As a User I can Add my company logo to my request so that companies can clearly see which company I represent.
+Acceptance Criteria 1: As a User i can add my logo in my user profile and the logo will be displayed for companies in the request.
+
+12. As a User I get a notice on my email when I have new candidates presented so that I have control and can act as fast as possible
+Acceptance Criteria 1: When candidate is presented a notice is sent automatic to the users registered email.
+
+13. As a Partner I get a notice on my email when a new request is added in my town so that I can act and start working on presenting a candidate
+Acceptance Criteria 1: When a new new request exists i get a email with notice of that request.
+Acceptance Criteria 2: Partner can choose which email the notice should go to.
+
 ## Wireframe
 
-![frontpage](../jobin/readme-files/images/wireframe/frontpage.png)
+![frontpage](./readme-files/images/wireframe/frontpage.png)
 ![frontpage#2](../jobin/readme-files/images/wireframe/frontpage2.png)
 
 ![register account](../jobin/readme-files/images/wireframe/register_account.png)
@@ -127,6 +193,7 @@ https://www.simpleimageresizer.com/ - For making images smaller
 https://pagespeed.web.dev/ - For checking Pagespeed Insights
 https://miniwebtool.com/django-secret-key-generator/ - For generating Django secret key
 https://cloudinary.com/ - For cloudstoring of pdf that is being saved to the database
+https://techsini.com/multi-mockup/index.php - Multi Device Website Mockup Generator
 
 ### Sources
 #### Images
