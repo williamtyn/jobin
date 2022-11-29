@@ -22,7 +22,11 @@
         {% endif %}
         <button type="submit" class="btn btn-danger">{% trans 'Sign Out' %}</button>
       </form>
-      <a href="/user_orderlist"><button class="btn btn-outline-dark">Cancel</button></a>
+      {% if request.user.user_type == 0 %}
+      <a href="{% url 'user/overview' %}"><button class="btn btn-outline-dark">Cancel</button></a>
+      {% else %}
+      <a href="{% url 'overview' %}"><button class="btn btn-outline-dark">Cancel</button></a>
+      {% endif %}
     </div>
   </div>
 </div>
