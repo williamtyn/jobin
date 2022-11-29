@@ -1,6 +1,6 @@
-# Portfolio Project 4 - Fullstack Full-Stack Toolkit
+# Portfolio Project 4 - Full-Stack Toolkit
 
-## JObIn - Compare and find the best consultants for your company!
+## JobIn - Compare and find the best consultants for your company!
 
 Finding the right consultant is more difficult than ever. That's why we've made it simple.
 
@@ -175,18 +175,7 @@ Acceptance Criteria 2: Partner can choose which email the notice should go to.
 ![database](../jobin/readme-files/order_database_schema.png)
 
 
-### Bugs
-* Rediricting to right page when user have logged in
-* Login confirmation message do not dissapear when user have been logged in after signing up.
-* Internal navbar links (Why Us and Step-by-step) is not accessable when user have logged in.
-* Footer is not displayed on pages when the user don´t need to scroll.
 
-#### Resolved Bugs
-* Toggle collapse inside a for loop in template
-* Navbar links on mobile
-* Redirect logedin user based on user type
-* Change of toggler color icon for Bootstrap navbar
-I struggled a lot with changing color of the toggler icon inte the navbar. Then i found [This](https://www.folkstalk.com/2022/09/bootstrap-navbar-toggler-icon-color-with-code-examples.html) and understod that I needed to change the url for the icon.
 
 
 ### Technologies Used
