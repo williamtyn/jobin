@@ -12,7 +12,7 @@
     </div>
     <div class="col-md-2">
       <br>
-      <a href="{% url 'new/order' %}"><button class="btn btn-success">New Request</button></a>
+      <a href="{% url 'new/order' %}" class="btn btn-success">New Request</a>
     </div>
   </div>
   <hr>
@@ -21,20 +21,20 @@
 <div class="container">
   {% for order in user_orders %}
   <div class="row">
-    
-    <div class="accordion" id="accordionExample">
+
+    <div class="accordion" id="accordion{{ order.id }}">
       <div class="accordion-item">
         <!-- Order header/titel -->
-        <h2 class="accordion-header" id="headingOne">
+        <h2 class="accordion-header" id="heading{{ order.id }}">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#order{{ order.id }}"
-            aria-expanded="true" aria-controls="collapseOne">
+            aria-expanded="true" aria-controls="order{{ order.id }}">
             {{ order.title }}
           </button>
         </h2>
       </div>
       <!-- Order body -->
-      <div id="order{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne"
-        data-bs-parent="#accordionExample">
+      <div id="order{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ order.id }}"
+        data-bs-parent="#accordion{{ order.id }}">
         <div class="container accordion-body">
           <div class="row">
             <div class="col-sm-6 col-md-2">
@@ -77,10 +77,8 @@
           <div class="row">
             <div class="col-12 text-center">
               <br>
-              <a href="/edit/{{ order.id }}"><button type="button" class="btn btn-outline-success">Edit
-                  Request</button></a>
-              <a href="/delete/{{ order.id }}"><button type="button"
-                  class="btn btn-outline-danger">Delete</button></a>
+              <a href="/edit/{{ order.id }}" class="btn btn-outline-success">Edit Request</a>
+              <a href="/delete/{{ order.id }}" class="btn btn-outline-danger">Delete</a>
             </div>
           </div>
         </div>
@@ -105,12 +103,11 @@
                 <h5 class="card-title">{{ candidate.first_name }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{ candidate.price }}</h6>
                 <p class="card-text">{{ candidate.summary }}</p>
-                <a href="{{ candidate.cv.url }}" target="_blank" class="card-link"><button type="button"
-                    class="btn btn-success">See CV</button></a>
-                <a href="{{ candidate.offer.url }}" target="_blank" class="card-link"><button type="button"
-                    class="btn btn-outline-success">See Offer</button></a>
-                <a href="mailto:{{ candidate.manager.email }}" class="card-link"><button type="button"
-                    class="btn btn-outline-dark">Contact Manager</button></a>
+                <a href="{{ candidate.cv.url }}" target="_blank" class="btn btn-success card-link">See CV</a>
+                <a href="{{ candidate.offer.url }}" target="_blank" class="btn btn-outline-success card-link">See
+                  Offer</a>
+                <a href="mailto:{{ candidate.manager.email }}" class="btn btn-outline-dark card-link">Contact
+                  Manager</a>
               </div>
             </div>
           </div>
@@ -130,11 +127,11 @@
 </div>
 {% else %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            You need to be a customer to have access to this page
-        </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      You need to be a customer to have access to this page
     </div>
+  </div>
 </div>
 {% endif %}
 {% endblock content %}

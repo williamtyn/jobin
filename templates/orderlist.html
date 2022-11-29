@@ -17,19 +17,19 @@
 <div class="container">
     <div class="row">
         {% for order in order_list %}
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordion{{ order.id }}">
             <!-- Order header/titel -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
+                <h2 class="accordion-header" id="heading{{ order.id }}">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#ord{{ order.id }}" aria-expanded="true" aria-controls="collapseOne">
+                        data-bs-target="#ord{{ order.id }}" aria-expanded="true" aria-controls="ord{{ order.id }}">
                         {{ order.title }}
                     </button>
                 </h2>
             </div>
             <!-- Order body -->
-            <div id="ord{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
+            <div id="ord{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ order.id }}"
+                data-bs-parent="#accordion{{ order.id }}">
                 <div class="container accordion-body">
                     <div class="row">
                         <div class="col-sm-6 col-md-2">
@@ -71,8 +71,8 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <br>
-                            <a href="{% url 'new-candidate' %}"><button class="btn btn-success">Send
-                                    Candidate</button></a>
+                            <a href="{% url 'new-candidate' %}" class="btn btn-success">Send
+                                    Candidate</a>
                         </div>
                     </div>
                 </div>

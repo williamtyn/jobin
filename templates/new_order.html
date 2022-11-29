@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -16,13 +16,14 @@
 {% if user.is_authenticated and user.user_type == 0 %}
 <div class="container">
     <div class="row">
-            <form method="post" style="margin-top: 1.3em;">
-                {{ form | crispy }}
-                {% csrf_token %}
-                <br>
-                <button type="submit" class="btn btn-success">Send Request</button>
-            </form>
-            <a href="/user/overview"><button class="btn btn-outline-dark">Cancel</button></a>
+        <form method="post" style="margin-top: 1.3em;">
+            {{ form | crispy }}
+            {% csrf_token %}
+            <br>
+            <button type="submit" class="btn btn-success">Send Request</button>
+        </form>
+        <div>
+            <a href="/user/overview" class="btn btn-outline-dark">Cancel</a>
         </div>
     </div>
 </div>

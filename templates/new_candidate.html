@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -16,13 +16,14 @@
 {% if user.is_authenticated and user.user_type == 1 %}
 <div class="container">
     <div class="row">
-            <form method="post" enctype="multipart/form-data" style="margin-top: 1.3em;">
-                {{ form | crispy }}
-                {% csrf_token %}
-                <br>
-                <button type="submit" class="btn btn-success">Send Candidate</button>
-            </form>
-            <a href="{% url 'overview' %}"><button class="btn btn-outline-dark">Cancel</button></a>
+        <form method="post" enctype="multipart/form-data" style="margin-top: 1.3em;">
+            {{ form | crispy }}
+            {% csrf_token %}
+            <br>
+            <button type="submit" class="btn btn-success">Send Candidate</button>
+        </form>
+        <div>
+            <a href="{% url 'overview' %}" class="btn btn-outline-dark">Cancel</a>
         </div>
     </div>
 </div>

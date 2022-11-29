@@ -49,8 +49,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'user/overview' %}">Your Requests</a>
           </li>
-          <button class="btn btn-outline-success my-2 my-sm-0 custom-button" type="submit"><a
-              href="{% url 'account_logout' %}">Logout</a></button>
+        </ul>
+          <a class="btn btn-outline-success my-2 my-sm-0 custom-button" href="{% url 'account_logout' %}">Logout</a>
+          
           {% endif %}
           <!-- Display navbar links for logged in Partners -->
           {% if user.user_type == 1 %}
@@ -58,12 +59,12 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'overview' %}">Overview</a>
             </li>
+          </ul>
             <a class="btn btn-outline-success my-2 my-sm-0 custom-button" href="{% url 'account_logout' %}">Logout</a>
             {% endif %}
             {% else %}
             <a href="{% url 'account_login' %}" class="link-in-button btn btn-outline-success my-2 my-sm-0 custom-button">Login/Register</a>
             {% endif %}
-          </ul>
       </div>
     </div>
   </nav>
@@ -88,8 +89,6 @@
     {% endblock content %}
   </main>
 
-
-</body>
 <!-- Footer -->
 <footer class="text-muted navbar fixed-bottom" id="showfooter">
   <div class="col-md-12 mt-4 mx-auto">
@@ -115,5 +114,5 @@
 <script src="https://kit.fontawesome.com/689aa347cf.js" crossorigin="anonymous"></script>
 <!-- Custom script.js -->
 <script src="{% static './js/script.js' %}"></script>
-
+</body>
 </html>

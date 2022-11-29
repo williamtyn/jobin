@@ -3,9 +3,9 @@
 {% block content %}
 <div class="container mt-5">
   <div class="row">
-      <div class="col-md-12">
-          <h3>Delete your request</h3>
-      </div>
+    <div class="col-md-12">
+      <h3>Delete your request</h3>
+    </div>
   </div>
   <hr>
 </div>
@@ -15,7 +15,7 @@
     <div class="col-md-8 mt-5 offset-md-2 text-center">
       <h3>You are about to delete this order</h3>
 
-        <p>This will be delete permanently! Are you sure you want to delete?</p>
+      <p>This will be delete permanently! Are you sure you want to delete?</p>
     </div>
   </div>
   <div class="container">
@@ -25,18 +25,20 @@
           {% csrf_token %}
           <button type="submit" class="btn btn-danger">Confirm Delete</button>
         </form>
-        <a href="/user_orderlist"><button class="btn btn-outline-dark">Cancel</button></a>
+        <div>
+          <a href="{% url 'user/overview' %}" class="btn btn-outline-dark">Cancel</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 {% else %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            This is not your request and you do not have access to this page
-        </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      This is not your request and you do not have access to this page
     </div>
+  </div>
 </div>
 {% endif %}
 {% endblock %}

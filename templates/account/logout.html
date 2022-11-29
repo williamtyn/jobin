@@ -23,9 +23,9 @@
         <button type="submit" class="btn btn-danger">{% trans 'Sign Out' %}</button>
       </form>
       {% if request.user.user_type == 0 %}
-      <a href="{% url 'user/overview' %}"><button class="btn btn-outline-dark">Cancel</button></a>
+      <a href="{% url 'user/overview' %}" class="btn btn-outline-dark">Cancel</a>
       {% else %}
-      <a href="{% url 'overview' %}"><button class="btn btn-outline-dark">Cancel</button></a>
+      <a href="{% url 'overview' %}" class="btn btn-outline-dark">Cancel</a>
       {% endif %}
     </div>
   </div>
