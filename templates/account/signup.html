@@ -23,7 +23,42 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button type="submit" class="btn btn-success text-center">{% trans "Sign Up" %} &raquo;</button>
+        <br>
+        <!-- Text to trigger modal -->
+        <p type="button" id="helpmodal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Help me
+        </p>
       </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Help instructions for Signup</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><b>Username</b></p>
+        <p>Is Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
+        <p><b>Password</b></p>
+        <p><b>Email</b></p>
+        <p>Is Required and must be unique</p>
+        <p>Your password can’t be too similar to your other personal information.
+          Your password must contain at least 8 characters.
+          Your password can’t be a commonly used password.
+          Your password can’t be entirely numeric.</p>
+        <p><b>VAT Number</b></p>
+        <p>Must be in format XXXXXX-XXXX and start with 55</p>
+        <p><b>Phone</b></p>
+        <p>In format 07XXXXXXXX as regular swedish numbers</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>

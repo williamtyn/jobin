@@ -87,7 +87,7 @@ body {
 #scrollbtn {
     background-color:#de6000;
     position: fixed;
-    bottom: 56px;
+    bottom: 80px;
     right: 20px;
     z-index: 99;
     border: none;
@@ -96,12 +96,9 @@ body {
 
 /* Signup template */
 
-.helptext {
-    display: none;
-}
-
-.signup li {
-    display: none;
+#helpmodal {
+    color: #0d6efd;
+    border-bottom: 1px;
 }
 
 /* User_orderlist */
