@@ -4,18 +4,18 @@
 
 Finding the right consultant is more difficult than ever. That's why we've made it simple.
 
-### This is how easily it works!
+### This is how easy it works!
 1. Simply create a request for the consultant you are looking for.
 2. Our partners present the best consultants to you.
 3. Compare consultants and choose the one that is best for your organization.
 
-![Image mockup of the website in a computer, tablet and phone](../jobin/readme-files/jobin_mockup.png)
+![Image mockup of the website in a computer, tablet and phone](./readme-files/jobin_mockup.png)
 
 ## Live Site
-[Go to site](https://jobin-compare-consultants.herokuapp.com/) 
+[Go to application](https://jobin-compare-consultants.herokuapp.com/) 
 
 ## Repository
-[View repository](www.website.com)
+[View repository](https://github.com/williamtyn/jobin)
 
 ---
 
@@ -24,14 +24,13 @@ Finding the right consultant is more difficult than ever. That's why we've made 
 <li><a href="#user-experince">UXD - User Experince Design</a></li>
 <ul><li><a href="#storytelling">Storytelling</a></li>
 <li><a href="#wireframe">Wireframe</a></li>
-<ul><li><a href="w1">Homepage, Sign up, Log in</a></li>
+<ul><li><a href="w1">Homepage, Signup, Login</a></li>
 <li><a href="#w2">Customer signed in</a></li>
 <li><a href="#w3">Partner signed in</a></li></ul>
 </ul>
 <li><a href="#flowchart">Flowchart</a></li>
-<li><a href="#user-stories">User Stories</a></li>
 
-<li><a href="#rules">The Surface Plane</a></li>
+<li><a href="#surface-plane">The Surface Plane</a></li>
 <ul><li><a href="#base">Base</a></li>
 <li><a href="#homepage">Homepage</a></li>
 <li><a href="#signup">Signup</a></li>
@@ -44,8 +43,6 @@ Finding the right consultant is more difficult than ever. That's why we've made 
 <ul><li><a href="#partner-overview">Partner Overview</a></li>
 <li><a href="#partner-new">Send Candidate</a></ul>
 </ul>
-<li><a href="#bugs">Bugs</a></li>
-<ul><li><a href="#solved-bugs">Solved Bugs</a></li></ul>
 <li><a href="#future-features">Future features</a></li>
 <li><a href="#testing">Testing</a></li>
 <li><a href="#technologies">Technologies</a></li>
@@ -68,9 +65,10 @@ The consultant industry have annual turnover of trillions of dollars worldwide. 
 ### Partners
 In Sweden, two new consulting companies are registered a week (statistics from 2021). There have never been so many companies fighting for the same customers. With our application, our partners can focus on their core business, hiring quality consultants, instead of having to spend time selling their services to clients. Whoever has the best consultant gets to deliver
 
-<h2 id="flowchart">Flowchart</h2> 
+## UXD - User Experince Design
 
-## The story of Mats and The Factory
+
+### The story of Mats and The Factory
 Mats is a hard-working manager at Svenska Industrigruppen AB.
 
 He started his career there as a 16-year-old, then as a summer worker, and for 30 years has had various roles at the factory that refines metal for several large Swedish companies. Mats is fairly new in his role as a leader but enjoys it very much, and according to the company's latest employee surveys, he seems to be doing a really good job.
@@ -86,69 +84,24 @@ Mats is satisfied.
 
 ## User Stories
 
-1. As a User I can register an account so that I can make a consultant request for my company.
-Acceptance Criteria 1: I can register account with my email and own password.
-Acceptance Criteria 2: I can fill in the details of my company as company name and vat number.
+* As a User I can register an account so that I can make a consultant request for my company.
+* As a User I can make a consultant request so that partners know what I am searching for.
+* As a User I can see all my requests in an overview so that I have control and know the status of the requests.
+* As a User I can see when a partner has presented a consultant so that I can decide if I want to schedule an interview with the consultant.
+* As a User I can see contact information for the manager so that I can schedule an interview with the manager/consultant.
+* As a User I can Edit my requests so that the request displays the correct information in case of some changes are made.
+* As a User I can delete my request so that partners do not spend time presenting candidates if we have already found what we are looking for.
 
-2. As a User I can make a consultant request so that partners know what I am searching for
-Acceptance Criteria 1: The information that i can fill in is: Title, role, period, startdate, locality, duties, demands, wishes and deadline.
-Acceptance Criteria 2: Startdate and deadline must be displayed with month, date, year.
 
-3. As a User I can see all my requests in an overview so that I have control and know the status of the requests
-Acceptance Criteria 1: When logging in i get redirected to the overview page.
-Acceptance Criteria 2: In the overview i can see all my requests.
-Acceptance Criteria 3: In every request i can see presented candidates.
+* As a User/Partner I can see information about the website/tool so that I understand why i should register an account.
+* As a Partner I can register an account so that I can see consultant requests from companies.
+* As a Partner I can see the details of the request so that I can present the right consultant.
+* As a Partner I can present a consultant with their CV, price, and conditions so that I can show the company that we have a solution for them.
 
-4. As a User I can see when a partner has presented a consultant so that I can decide if I want to schedule an interview with the consultant
-Acceptance Criteria 1: In the overview I can see how many candidates that have been presented for the specific request.
-Acceptance Criteria 2: In request details I can see the presented candidate with name, price, summary, cv and offer.
-Acceptance Criteria 3: I can also contact the manager by email.
 
-5. As a User I can see contact information for the manager so that I can schedule an interview with the manager/consultant
-Acceptance Criteria 1: When a candidate is presented I can contact the manager bu email for schedule an interview.
+* As a Admin I can view details about users and partners so that I know who uses our tool.
+* As a Admin I can see a full list of ongoing requests so that I can contact new companies that may have these consultants.
 
-6. As a Partner I can register an account so that I can see consultant requests from companies
-Acceptance Criteria 1: Register account with my own password.
-Acceptance Criteria 2: Add details of my company with company name and vat number.
-
-7. As a Partner I can see the details of the request so that I can present the right consultant
-Acceptance Criteria 1: When I click the request i can see details about what the company is asking for.
-
-8. As a Partner I can present a consultant with their CV, price, and conditions so that I can show the company that we have a solution for them
-Acceptance Criteria 1: On the request details i can choose to present a candidate.
-Acceptance Criteria 2: I can upload CV and offer in pdf format.
-Acceptance Criteria 3: I can fill in the price for consultant by the hour.
-
-9. As a Admin I can view details about users and partners so that I know who uses our tool
-Acceptance Criteria 1: In adminpanel i can see a list of all registered accounts.
-Acceptance Criteria 2: If i click on the account i can see if they are a user or partner.
-
-10. As a Admin I can see a full list of ongoing requests so that I can contact new companies that may have these consultants
-Acceptance Criteria 1: In adminpanel i can see a list of every request in the database.
-Acceptance Criteria 2: I can see every detail of the request including contact information.
-
-14. As a User/Partner I can see information about the website/tool so that I understand why i should register an account
-Acceptance Criteria 1: When i go to the homepage I can see information about the service Immediately.
-Acceptance Criteria 2: The homepage is user-friendly and i understand the content and information.
-
-15. As a User I can Edit my requests so that the request displays the correct information in case of some changes are made
-Acceptance Criteria 1: On the overview I can click on changing the request.
-Acceptance Criteria 2: The change are made immediately and updates my request.
-
-16. As a User I can delete my request so that partners do not spend time presenting candidates if we have already found what we are looking for
-Acceptance Criteria 1: On the overview I can click on delete the request.
-Acceptance Criteria 2: The change are made immediately and deletes my request.
-
-### User Stories not done
-11. As a User I can Add my company logo to my request so that companies can clearly see which company I represent.
-Acceptance Criteria 1: As a User i can add my logo in my user profile and the logo will be displayed for companies in the request.
-
-12. As a User I get a notice on my email when I have new candidates presented so that I have control and can act as fast as possible
-Acceptance Criteria 1: When candidate is presented a notice is sent automatic to the users registered email.
-
-13. As a Partner I get a notice on my email when a new request is added in my town so that I can act and start working on presenting a candidate
-Acceptance Criteria 1: When a new new request exists i get a email with notice of that request.
-Acceptance Criteria 2: Partner can choose which email the notice should go to.
 
 ## Wireframe
 
@@ -167,8 +120,106 @@ Acceptance Criteria 2: Partner can choose which email the notice should go to.
 ![partner overview](./readme-files/images/wireframe/partner_overview.png)
 ![partner request details](./readme-files/images/wireframe/partner_request_details.png)
 
-### Workflow
-![workflow](./readme-files/workflow.png)
+
+<h2 id="flowchart">Flowchart</h2> 
+For a better understand how the flow of both a customer and partner should look, i´ve made a flowchart to describe the flow of a user from that they are visiting the application to that they have made the first request or send their first candidate.
+
+![flowchart](./readme-files/workflow.png)
+
+## The Surface Plane
+
+### Base
+To make the application as dynamic as possible i want the navbar and footer to be the same in all of the application. Therefore Django dynamic pages is used so the user always recognise the default layout there on.
+
+Navbar
+![navbar](./readme-files/images/surface/navbar.png)
+
+Footer
+![footer](./readme-files/images/surface/footer.png)
+
+### Homepage
+A big goal is to highlight the advantages as early as possible so the user gets sold on why the should register and use our application. Two call to action is being displayed in the hero image to encurage the user to do something, either sign up or read more.
+
+The three biggest advantages of using our service is being displayed under the hero image. On desktop the user get a hint about them and gets curious to read more.
+
+![hero](./readme-files/images/surface/hero.png)
+
+When the user scrolls down they can see some more advantages in combination with a sneakpeak how the application looks on a laptop. Also here we have a call to action to encourage the user to do something.
+
+![mockup and cta](./readme-files/images/surface/text-with-button.png)
+
+So far we have focused on the user (Customer) and thats because the main market must be to the customer to do requests in the application. We know that if we fills the database with a lot of request, the partner will come to us to find new business opportunities.
+
+![partner cta](./readme-files/images/surface/partner-cta.png)
+
+After that we focus on the partner on the homepage and display a Call-to-action for the partner to register a account.
+
+![step-by-step](./readme-files/images/surface/step-by-step.png)
+
+The Step-by-step explains in details how the applications works and we want to show that to attract the user who want to understand more before making a decision. 
+
+![quote](./readme-files/images/surface/quote.png)
+
+and as a last intention to get the user to signup we display a quote “If you always do what you've always done, you'll always get what you've always got.”.
+Just to get the user to think in a different approach and signup to our application. We display a back-to-top button so the user don´t have to scroll up to register.
+
+### Signup
+The user are using the same signup page and choose type of account, customer or partner, due to which type of account they will use.
+
+![signup](./readme-files/images/surface/signup.png)
+
+### Login
+Its easy to login for returning user. Just fill in your username and password and you get logged in.
+
+![login](./readme-files/images/surface/login.png)
+
+### Customer Overview
+When user have signed up or loged in as a customer the get redirected to the user/overview page. On this page they can find a call to action to make a new request. This is also the main page for the customer where they can see all their requests and also candidates on every request.
+
+![user-overview](./readme-files/images/surface/user-overview.png)
+
+![request-details](./readme-files/images/surface/request-details.png)
+
+
+### New Request
+When the user click on the button to make a new request they get redirected to a form to fill in the details about the request.
+
+![new-request](./readme-files/images/surface/new-request.png)
+
+### Edit request
+From the overview the user can see the request and click on edit request if they need to make some changes on the request.
+
+![buttons](./readme-files/images/surface/buttons.png)
+
+![edit-request](./readme-files/images/surface/edit-request.png)
+
+
+### Delete Request
+On the overview the customer also can choose to delete the request.
+
+![buttons](./readme-files/images/surface/buttons.png)
+
+![delete-request](./readme-files/images/surface/delete-request.png)
+
+
+### Partner Overview
+When the partner have signup or loged in the get redirected to the main request overview where they can see all request thats being active. If they click on the request they can see details about that specific request.
+
+![partner overview](./readme-files/images/surface/partner-overview.png)
+
+![overview details](./readme-files/images/surface/overview-details.png)
+
+
+### Send Candidate
+The partner can see information about the request and when they have a candidate that suits the request they can present the candidate for the customer.
+
+![present-candidate](./readme-files/images/surface/present-candidate.png)
+
+### See Candidates
+When the customer have presented the candidate the user can see that candidate presented on their request. Compare with all the cnadidates thats being presented and choose which one suits their need the best. IF they want to schedule an interview they can contact the manager by email.
+
+![see-candidate](./readme-files/images/surface/see-candidates.png)
+
 
 ### Database schema
 #### Order
