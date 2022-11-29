@@ -43,7 +43,7 @@ Finding the right consultant is more difficult than ever. That's why we've made 
 <ul><li><a href="#partner-overview">Partner Overview</a></li>
 <li><a href="#partner-new">Send Candidate</a></ul>
 </ul>
-<li><a href="#future-features">Future features</a></li>
+<li><a href="#partner-new">Database Design</a></ul>
 <li><a href="#testing">Testing</a></li>
 <li><a href="#technologies">Technologies</a></li>
 <li><a href="#deployment">Deployment</a></li>
@@ -102,6 +102,7 @@ Mats is satisfied.
 * As a Admin I can view details about users and partners so that I know who uses our tool.
 * As a Admin I can see a full list of ongoing requests so that I can contact new companies that may have these consultants.
 
+---
 
 ## Wireframe
 
@@ -125,6 +126,8 @@ Mats is satisfied.
 For a better understand how the flow of both a customer and partner should look, i´ve made a flowchart to describe the flow of a user from that they are visiting the application to that they have made the first request or send their first candidate.
 
 ![flowchart](./readme-files/workflow.png)
+
+---
 
 ## The Surface Plane
 
@@ -220,22 +223,60 @@ When the customer have presented the candidate the user can see that candidate p
 
 ![see-candidate](./readme-files/images/surface/see-candidates.png)
 
+---
 
-### Database schema
-#### Order
-![database](../jobin/readme-files/order_database_schema.png)
+## Database Design
+On this project PostGresql is used with ElephantSQL
+
+(link to Database Diagram)
+[Database Diagram](https://res.cloudinary.com/dpliee0fu/image/upload/v1669761371/Database_Planning_gzhnzg.pdf)
 
 
+### Key Models
 
+### User
 
+* The user profile is connected to the User model created by Allauth on registration.
+* The model is extended with AbstractUser to be able to save different user types with different permissions.
+* Primary Key is the id which being genereated automatic when user is created.
+
+### Order
+
+* The order model is related to user model to see who is responsible for the order.
+* If the user is deleted, the order also get deleted so no orders is active for users that don´t exists.
+
+### Candidate
+
+* Candidates are related to their managers (Users) who "create" the candidate.
+* Candidates are also related to Order on which managers present the candidate and links them together.
+* Being linked to the order the user can also get access to the Candidate information via the template.
+
+---
+
+## Testing
+(link to testing.md)
+
+---
 
 ### Technologies Used
-https://www.simpleimageresizer.com/ - For making images smaller
-https://pagespeed.web.dev/ - For checking Pagespeed Insights
-https://miniwebtool.com/django-secret-key-generator/ - For generating Django secret key
-https://cloudinary.com/ - For cloudstoring of pdf that is being saved to the database
-https://techsini.com/multi-mockup/index.php - Multi Device Website Mockup Generator
+* [HTML](https://sv.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [Javascript](https://www.javascript.com/)
+* [Python](https://www.python.org/)
+* [Django](https://www.djangoproject.com/)
+* [ElephantSQL](https://www.elephantsql.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Heroku](https://id.heroku.com/login)
+* [Cloudinary](https://cloudinary.com/)
+* [Github](https://github.com/)
+* [Gitpod](https://www.gitpod.io/)
+* [Balsamiq](https://balsamiq.com/)
+* [SimpleImageResizer](https://www.simpleimageresizer.com/)
+* [Pagespeed](https://pagespeed.web.dev/)
+* [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/)
+* [Techsini](https://techsini.com/multi-mockup/index.php)
 
 ### Sources
 #### Images
-[Homepage Partner]https://www.pexels.com/sv-se/foto/manniskor-barbar-dator-sitter-mote-4340139/
+
+[Homepage Partner](https://www.pexels.com/sv-se/foto/manniskor-barbar-dator-sitter-mote-4340139/)
