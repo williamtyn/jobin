@@ -223,6 +223,18 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 In the admin panel, the admin can see a list of every registered request in the database and details about the request.
 Due to sensitive information, no image of the admin panel is displayed in the readme.
 
+
+### User Stories (could) that are not done
+11. As a User I can Add my company logo to my request so that companies can clearly see which company I represent.
+Acceptance Criteria 1: As a User i can add my logo in my user profile and the logo will be displayed for companies in the request.
+
+12. As a User I get a notice on my email when I have new candidates presented so that I have control and can act as fast as possible
+Acceptance Criteria 1: When candidate is presented a notice is sent automatic to the users registered email.
+
+13. As a Partner I get a notice on my email when a new request is added in my town so that I can act and start working on presenting a candidate
+Acceptance Criteria 1: When a new new request exists i get a email with notice of that request.
+Acceptance Criteria 2: Partner can choose which email the notice should go to.
+
 ---
 
 <h2 id="manual-testing">Manual Testing</h2>
