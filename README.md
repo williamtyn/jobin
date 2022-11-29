@@ -153,22 +153,22 @@ Acceptance Criteria 2: Partner can choose which email the notice should go to.
 ## Wireframe
 
 ![frontpage](./readme-files/images/wireframe/frontpage.png)
-![frontpage#2](../jobin/readme-files/images/wireframe/frontpage2.png)
+![frontpage#2](./readme-files/images/wireframe/frontpage2.png)
 
-![register account](../jobin/readme-files/images/wireframe/register_account.png)
-![login](../jobin/readme-files/images/wireframe/login.png)
+![register account](./readme-files/images/wireframe/register_account.png)
+![login](./readme-files/images/wireframe/login.png)
 
 ### User loged in
-![user overview](../jobin/readme-files/images/wireframe/user_overview.png)
-![user request details](../jobin/readme-files/images/wireframe/user_request_details.png)
-![user presented candidates](../jobin/readme-files/images/wireframe/user_presented_candidates.png)
+![user overview](./readme-files/images/wireframe/user_overview.png)
+![user request details](./readme-files/images/wireframe/user_request_details.png)
+![user presented candidates](./readme-files/images/wireframe/user_presented_candidates.png)
 
 ### Partner loged in
-![partner overview](../jobin/readme-files/images/wireframe/partner_overview.png)
-![partner request details](../jobin/readme-files/images/wireframe/partner_request_details.png)
+![partner overview](./readme-files/images/wireframe/partner_overview.png)
+![partner request details](./readme-files/images/wireframe/partner_request_details.png)
 
 ### Workflow
-![workflow](../jobin/readme-files/workflow.png)
+![workflow](./readme-files/workflow.png)
 
 ### Database schema
 #### Order
@@ -179,6 +179,7 @@ Acceptance Criteria 2: Partner can choose which email the notice should go to.
 * Rediricting to right page when user have logged in
 * Login confirmation message do not dissapear when user have been logged in after signing up.
 * Internal navbar links (Why Us and Step-by-step) is not accessable when user have logged in.
+* Footer is not displayed on pages when the user don´t need to scroll.
 
 #### Resolved Bugs
 * Toggle collapse inside a for loop in template
