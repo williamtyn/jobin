@@ -1,5 +1,7 @@
 Back to README
+
 ---
+
 ## User Stories Testing
 
 ### User/Customer Stories Testing
@@ -31,13 +33,16 @@ Back to README
 
 <h3 id="one">As a User I can register an account so that I can make a consultant request for my company.</h3>
 Acceptance Criteria 1: I can register account with my email and own password.
+
 Acceptance Criteria 2: I can fill in the details of my company as company name and vat number.
 
 ![signup](./readme-files/images/testing/1.png)
 On the signup page the User can sign up and add their own unique email and password. They can also fill in the details of their company as company name and vat number.
 
+
 <h3 id="two">As a User I can make a consultant request so that partners know what I am searching for.</h3>
 Acceptance Criteria 1: The information that i can fill in is: Title, role, period, startdate, locality, duties, demands, wishes and deadline.
+
 Acceptance Criteria 2: Startdate and deadline must be displayed with month, date, year.
 
 ![new-request](./readme-files/images/testing/2.png)
@@ -133,6 +138,8 @@ Due to sensitive information no image of the admin panel is displayed in the rea
 Acceptance Criteria 1: In adminpanel i can see a list of every request in the database.
 Acceptance Criteria 2: I can see every detail of the request including contact information.
 
+---
+
 ## Manual Testing
 
 ### Navigation Bar
@@ -141,6 +148,7 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Navbar is fully responsible on small/medium/large devices.
 * Customer see correct link "Your overview" when logged in.
 * Partner see correct link "Overview" when logged in.
+* Navbar collapse works on smaller devices.
 * Why Us and Step-by-step is internal anchor links to the homepage and are not available when the user not are on the homepage, see bugs in Readme.
 
 ### Footer
@@ -157,14 +165,138 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * All buttons works and links correctly.
 * Icons are being displayed correctly.
 * Images are being displayed correctly.
-* Good contrast between text/images/buttons (CTA for partner signup image could be darker but struggled with overlay on that container)
+* Good contrast between text/images/buttons.
 
+### Sign up page
+
+* Username, Email, Company Name, VAT and password are required as expected.
+* First Name and Phone are optional.
+* Help modal works as expected.
+* User get redirected to the right page after based on user type.
+* Message of user dont dissapear when user have signed up, need to manually close the message, see bugs in Readme.
+* Message of verifications email being sent is displayed after signup, see bugs in Readme.
+
+### Log in page
+
+* Form works as expected with username and password.
+* User gets redirected to the right page after login.
+* Message of login confirmation being displayed and dissapear as expected.
+
+### New Request Customer
+
+* New Request button is linked correctly.
+* All fields in new request form is required.
+* Send request button redirect back to overview after form is valid and data sent.
+* Confirmation message of request sucessfully submitted is displayed.
+* Cancel button for the new request is linked and redirecting customer back to overview.
+* The request is shown in the Overview to display for all partners.
+
+### Request Overview
+
+* Showing all request with titel in the collapse.
+* The toggle of collapse works as expected.
+* All data from the model being displayed.
+
+### Edit Request Customer
+
+* Edit button is linked and redirect customer to the right url for editing request.
+* The form for editing is prefilled with the right data.
+* Message that changes have been made are displayed and dissapears.
+* Data being changed in the right form field when changes are made.
+* Cancel button in edit request works and redirect to overview.
+* If customer makes request inactive its removed from Partner Overview as expected.
+
+### Delete Request Customer
+
+* Deletebutton is displayed in request details.
+* When button being pressed customer is redirected to the right url to delete the request.
+* Customer is redirected to confirm delete page.
+* Cancel button is linked correctly.
+* Message is being displayed to customer after confirmation.
+* Request data is removed from the database.
+
+### See Candidates as Customer
+
+* Show Candidates toggle button works as expected.
+* Message is being displayed correctly if there is no candidates presented.
+* Candidate are being presented as card with name, price,summary.
+* Button to see CV works as expected.
+* Button to see Offer works as expected.
+* Contact Manager button opens the mailclient and email to manager is displayed.
+
+### Partner Overview
+
+* All active orders is displayed in the overview.
+* Toggle the collapse works as expected.
+* All details is displayed for the right order in the collapse details.
+* Send candidate button is being displayed as expected.
+* Send candidate button is linked correctly.
+
+### Send Candidate
+
+* Every fieldform is required as expected.
+* Partner need to choose which order the candidate should be presented on (works now but with many order this should be changed to prefilled).
+* Message being displayed and dissapear after confirmation of sending candidate.
+* Cancel button works as expected.
+* The candidate is being displayed on the right request for customer.
+
+### Log out
+
+* Cancel button for logout works as expected.
+* Message is being displayed after log out confirmation.
+
+### Admin panel
+
+* Admin can see a list of all Candidates with details.
+* Admin have access to all Orders with details.
+* Admin have access to all Users with details.
+
+### Authorization
+
+This applies to every browser. User is authenticated in the browser when they log in.
+* User gets redirected to login page if not authenticated for /new//order.
+* User gets redirected to login page if not authenticated for /edit/order.
+* User gets redirected to login page if not authenticated for /delete/order.
+* User gets redirected to login page if not authenticated for /overview.
+* User gets redirected to login page if not authenticated for /user/overview.
+* User gets redirected to login page if not authenticated for /new/candidate.
+
+* Message "You need to be a customer to have access to this page" being displayed to partner if they try to access /user/overview.
+* Message "You need to be a customer to have access to this page" being displayed to partner if they try to access /new/order.
+* Message "You need to be a partner to have access to this page" being displayed to customer if they try to access /overview.
+* Message "You need to be a partner to have access to this page" being displayed to customer if they try to access /new/candidate.
+* Message "This is not your request and you do not have access to this page" being displayed if customer/partner try to access /edit or /delete a request that is not theirs.
+
+* SQL Injection have been tried to access database information or destroy database without any success.
+
+### Responsivness
+
+Chrome dev tools was used throughout the development of the project to test responsiveness. Responsiveness was tested using Dev Tools to emulate the following devices,
+
+* Iphone 5
+* Iphone 6/7/8
+* Iphone 6/7/8 Plus
+* Iphone X
+* Ipad
+* Ipad Pro
+
+### Browser Testing
+
+During development, the testing was mainly done solely using Google Chrome.
+
+In production the site has been tested on the following browsers,
+
+* Firefox
+* Safari
+* Opera
+
+---
 
 ## Validation
 
 ### [W3C HTML Validator](https://validator.w3.org/)
-* Errors
-* Warnings
+* 0 Errors
+* 0 Warnings
 
 ### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 * 0 Errors
@@ -179,5 +311,41 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * 0 Errors
 * 0 Warnings
 
+The python extention was used to test Python for Pep8 compliance withit's built in linting too.
 
+Alot of the Python errors were fixed during development.
+Any errors that related to files that were auto generated by Django were left untouched.
+* In settings AUTH_PASSWORD_VALIDATORS, STATICFILES_STORAGE due to implementation with help from Hello Django episode on Code Institute.
+* Migration Files
+* ./manage.py
 
+### Lighthouse Testing
+
+#### On desktop for homepage
+![lighthouse1](./readme-files/images/testing/lighthouse_desktop.png)
+
+#### On mobile for homepage
+![lighthouse1](./readme-files/images/testing/lighthouse_mobile.png)
+
+---
+
+### Bugs
+* Login confirmation message do not dissapear when user have been logged in after signing up.
+* Internal navbar links (Why Us and Step-by-step) is not accessable when user have logged in.
+* Footer is not displayed on pages when the user don´t need to scroll. The footer only appears on pages where users need to scroll.
+
+#### Solved Bugs
+* Rediricting to right page when user have logged in
+I had i main issue that user was not redirected to the right page based on the user type. I was able to solve that issue with a custom view and defining the get user type, the redirected to the right url based on user type.
+
+* Toggle collapse inside a for loop in template
+A bootstrap collapse is used for displaying both the order and candidate for the customer. There was a main issue that every collapse opened when i toggled it. I solved it with som custom javascript code to target the nearest element when user toggled. 
+
+* Navbar links on mobile
+The navbar i separetad in different lists based on if they are authenticated and when logged in, which user type. All logged in links are pushed to the right and first i did that with position fixed. Therefore the internal(logged in) links what not displaying in navbar on smaller devices.
+I solved that with som custom CSS so the position is fixed down to 991px when the collapse navbar appear, then the position fixed is removed.
+
+* Change of toggler color icon for Bootstrap navbar
+I struggled a lot with changing color of the toggler icon inte the navbar. Then i found [This](https://www.folkstalk.com/2022/09/bootstrap-navbar-toggler-icon-color-with-code-examples.html) and understod that I needed to change the url for the icon.
+
+---
