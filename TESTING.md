@@ -2,9 +2,52 @@ Back to README
 
 ---
 
-## User Stories Testing
+## Testing Catalouge
+<li><a href="#user-stories">User Stories Testing</a></li>
+<ul>
+<li><a href="#customer-testing">Customer Stories Testing</a></li>
+<li><a href="#partner-testing">Partner Stories Testing</a></li>
+<li><a href="#admin-testing">Admin Stories Testing</a></li>
+</ul>
+<li><a href="#manual-testing">Manual Testing</a></li>
+<ul>
+<li><a href="#navigation-bar">Navigation Bar</a></li>
+<li><a href="#footer">Footer</a></li>
+<li><a href="#homepage">Homepage</a></li>
+<li><a href="#signup">Signup Page</a></li>
+<li><a href="#login">Login Page</a></li>
+<li><a href="#new-request">New Request Customer</a></li>
+<li><a href="#request-overview">Request Overview</a></li>
+<li><a href="#edit-request-customer">Edit Request Customer</a></li>
+<li><a href="#delete-request-customer">Delete Request Customer</a></li>
+<li><a href="#see-candidates">See Candidates as Customer</a></li>
+<li><a href="#partner-overview">Partner Overview</a></li>
+<li><a href="#send-candidate">Send Candidate</a></li>
+<li><a href="#logout">Log out</a></li>
+<li><a href="#adminpanel">Admin panel</a></li>
+<li><a href="#authorization">Authorization</a></li>
+<li><a href="#responsivness">Responsivness</a></li>
+<li><a href="#browser-testing">Browser Testing</a></li>
+</ul>
+<li><a href="#validation">Validation</a></li>
+<ul>
+<li><a href="#validation">W3C HTML Validator</a></li>
+<li><a href="#validation">W3C CSS Validator</a></li>
+<li><a href="#validation">JSHint Javascript Validator</a></li>
+<li><a href="#validation">PEP8 Python Validator</a></li>
+</ul>
+<li><a href="#lighthouse">Lighthouse Testing</a></li>
+<li><a href="#bugs">Bugs</a></li>
+<ul>
+<li><a href="#solved-bugs">Solved Bugs</a></li>
+</ul>
 
-### User/Customer Stories Testing
+
+---
+
+<h2 id="user-stories">User Stories Testing</h2>
+
+<h3 id="customer-testing">Customer Stories Testing</h3>
 <ul>
 <li><a href="#one">As a User I can register an account so that I can make a consultant request for my company.</a></li>
 <li><a href="#two">As a User I can make a consultant request so that partners know what I am searching for.</a></li>
@@ -15,7 +58,7 @@ Back to README
 <li><a href="#sixteen">As a User I can delete my request so that partners do not spend time presenting candidates if we have already found what we are looking for.</a></li>
 </ul>
 
-### Partner Stories Testing
+<h3 id="#partner-testing">Partner Testing</h3>
 <ul>
 <li><a href="#fourteen">As a User/Partner I can see information about the website/tool so that I understand why i should register an account.</a></li>
 <li><a href="#six">As a Partner I can register an account so that I can see consultant requests from companies.</a></li>
@@ -23,11 +66,13 @@ Back to README
 <li><a href="#eigth">As a Partner I can present a consultant with their CV, price, and conditions so that I can show the company that we have a solution for them.</a></li>
 </ul>
 
-### Admin Stories Testing
+<h3 id="#admin-testing">Admin Testing</h3>
 <ul>
 <li><a href="#nine">As a Admin I can view details about users and partners so that I know who uses our tool.</a></li>
 <li><a href="#ten">As a Admin I can see a full list of ongoing requests so that I can contact new companies that may have these consultants.</a></li>
 </ul>
+
+---
 
 ## User/Customer Stories Testing
 
@@ -36,8 +81,10 @@ Acceptance Criteria 1: I can register account with my email and own password.
 
 Acceptance Criteria 2: I can fill in the details of my company as company name and vat number.
 
+
 ![signup](./readme-files/images/testing/1.png)
 On the signup page the User can sign up and add their own unique email and password. They can also fill in the details of their company as company name and vat number.
+
 
 
 <h3 id="two">As a User I can make a consultant request so that partners know what I am searching for.</h3>
@@ -49,9 +96,13 @@ Acceptance Criteria 2: Startdate and deadline must be displayed with month, date
 When the User make a new request they can fill in the information in acceptance criteria 1. Duties are named requirements due to clearer understanding.
 Startdate and deadline is in format MM, DD, YYYY.
 
+
+
 <h3 id="three">As a User I can see all my requests in an overview so that I have control and know the status of the requests.</h3>
 Acceptance Criteria 1: When logging in i get redirected to the overview page.
+
 Acceptance Criteria 2: In the overview i can see all my requests.
+
 Acceptance Criteria 3: In every request i can see presented candidates.
 
 ![request-overview](./readme-files/images/testing/3.1.png)
@@ -60,22 +111,31 @@ If the user click on the request, details of the request is presented and also a
 
 ![no-candidates](./readme-files/images/testing/3.2.png)
 
+
+
 <h3 id="four">As a User I can see when a partner has presented a consultant so that I can decide if I want to schedule an interview with the consultant.</h3>
 Acceptance Criteria 1: In the overview I can see how many candidates that have been presented for the specific request.
+
 Acceptance Criteria 2: In request details I can see the presented candidate with name, price, summary, cv and offer.
+
 Acceptance Criteria 3: I can also contact the manager by email.
 
 ![candidates](./readme-files/images/testing/4.png)
 When the user click on the button "Show Candidates" the see all candidates that have been presented on that specific request. The user see Name, Price, Summary. When they click buttons for CV and Offer a new page opens and they can see the document there.
 The button "Contact Manager" opens their mailclient with the managers email prefilled.
 
+
+
 <h3 id="five">As a User I can see contact information for the manager so that I can schedule an interview with the manager/consultant.</h3>
 Acceptance Criteria 1: When a candidate is presented I can contact the manager bu email for schedule an interview.
 
 As describes above, the managers email is being prefilled in the users mailclient when clicking the button "Contact Manager".
 
+
+
 <h3 id="fifteen">As a User I can Edit my requests so that the request displays the correct information in case of some changes are made.</h3>
 Acceptance Criteria 1: On the overview I can click on changing the request.
+
 Acceptance Criteria 2: The change are made immediately and updates my request.
 
 ![edit-button](./readme-files/images/testing/15.1.png)
@@ -83,8 +143,11 @@ In the User Overview the user can see two button for edit or deleting their requ
 
 ![edit-form](./readme-files/images/testing/15.2.png)
 
+
+
 <h3 id="sixteen">As a User I can delete my request so that partners do not spend time presenting candidates if we have already found what we are looking for.</h3>
 Acceptance Criteria 1: On the overview I can click on delete the request.
+
 Acceptance Criteria 2: The change are made immediately and deletes my request.
 
 ![edit-button](./readme-files/images/testing/15.1.png)
@@ -94,19 +157,27 @@ In the overview the user can see the delete button. When button is being clicked
 
 ## Partner Stories Testing
 
+
+
 <h3 id="fourteen">As a User/Partner I can see information about the website/tool so that I understand why i should register an account.</h3>
 Acceptance Criteria 1: When i go to the homepage I can see information about the service immediately.
+
 Acceptance Criteria 2: The homepage is user-friendly and i understand the content and information.
 
 ![homepage](./readme-files/images/testing/14.png)
 A page visitor see the application purpose immediately, and with one click they can see step-by-step how the application works. For more information about the User Experince, please see the section *Manuaö Testing*.
 
+
+
 <h3 id="six">As a Partner I can register an account so that I can see consultant requests from companies.</h3>
 Acceptance Criteria 1: Register account with my own password.
+
 Acceptance Criteria 2: Add details of my company with company name and vat number.
 
 ![partner-account](./readme-files/images/testing/1.png)
 In the signup page the partner create their account but choose Partner instead of Customer as User type. The partner fills in details with Company Name and Vat number.
+
+
 
 <h3 id="seven">As a Partner I can see the details of the request so that I can present the right consultant.</h3>
 Acceptance Criteria 1: When I click the request i can see details about what the company is asking for.
@@ -114,9 +185,13 @@ Acceptance Criteria 1: When I click the request i can see details about what the
 ![request-details](./readme-files/images/testing/7.png)
 When the partner click on the request title all details about that specific request is being displayed for the partner.
 
+
+
 <h3 id="eight">As a Partner I can present a consultant with their CV, price, and conditions so that I can show the company that we have a solution for them.</h3>
 Acceptance Criteria 1: On the request details i can choose to present a candidate.
+
 Acceptance Criteria 2: I can upload CV and offer in pdf format.
+
 Acceptance Criteria 3: I can fill in the price for consultant by the hour.
 
 ![request-details](./readme-files/images/testing/7.png)
@@ -125,24 +200,31 @@ When the partner see details about the request, they also see the button for pre
 ![send-candidate](./readme-files/images/testing/8.png)
 When the partner have clicked the button "send candidate", a form is displayed for them. In the form they upload cv and offer in pdf. They also present the price for hiring this consultant.
 
-## Admin Stories Testing
+
+<h2 id="admin-testing">Admin Stories Testing</h2>
+
+
 
 <h3 id="nine">As a Admin I can view details about users and partners so that I know who uses our tool.</h3>
 Acceptance Criteria 1: In adminpanel i can see a list of all registered accounts.
+
 Acceptance Criteria 2: If i click on the account i can see if they are a user or partner.
 
 In the adminpanel the admin can see a list of every registered user. When admin click on the user, all information about the user is displayed, also if the user is a customer or partner.
 Due to sensitive information no image of the admin panel is displayed in the readme.
 
+
+
 <h3 id="ten">As a Admin I can see a full list of ongoing requests so that I can contact new companies that may have these consultants.</h3>
 Acceptance Criteria 1: In adminpanel i can see a list of every request in the database.
+
 Acceptance Criteria 2: I can see every detail of the request including contact information.
 
 ---
 
-## Manual Testing
+<h2 id="manual-testing">Manual Testing</h2>
 
-### Navigation Bar
+<h3 id="navigation">Navigation Bar</h3>
 
 * All links correctly redirecting to the correct pages for visitor.
 * Navbar is fully responsible on small/medium/large devices.
@@ -151,7 +233,7 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Navbar collapse works on smaller devices.
 * Why Us and Step-by-step is internal anchor links to the homepage and are not available when the user not are on the homepage, see bugs in Readme.
 
-### Footer
+<h3 id="footer">Footer</h3>
 
 * All icon links works correctly.
 * All links open in a new page.
@@ -160,14 +242,14 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Back to top button takes visitor back to top.
 * Footer are not being displayed on pages when user don´t need to scroll, see bugs in Readme.
 
-### Homepage
+<h3 id="homepage">Homepage</h3>
 
 * All buttons works and links correctly.
 * Icons are being displayed correctly.
 * Images are being displayed correctly.
 * Good contrast between text/images/buttons.
 
-### Sign up page
+<h3 id="signup">Signup page</h3>
 
 * Username, Email, Company Name, VAT and password are required as expected.
 * First Name and Phone are optional.
@@ -176,13 +258,13 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Message of user dont dissapear when user have signed up, need to manually close the message, see bugs in Readme.
 * Message of verifications email being sent is displayed after signup, see bugs in Readme.
 
-### Log in page
+<h3 id="login">Login page</h3>
 
 * Form works as expected with username and password.
 * User gets redirected to the right page after login.
 * Message of login confirmation being displayed and dissapear as expected.
 
-### New Request Customer
+<h3 id="new-request">New Request Customer</h3>
 
 * New Request button is linked correctly.
 * All fields in new request form is required.
@@ -191,13 +273,13 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Cancel button for the new request is linked and redirecting customer back to overview.
 * The request is shown in the Overview to display for all partners.
 
-### Request Overview
+<h3 id="request-overview">Request Overview</h3>
 
 * Showing all request with titel in the collapse.
 * The toggle of collapse works as expected.
 * All data from the model being displayed.
 
-### Edit Request Customer
+<h3 id="edit-request-customer">Edit Request Customer</h3>
 
 * Edit button is linked and redirect customer to the right url for editing request.
 * The form for editing is prefilled with the right data.
@@ -206,7 +288,7 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Cancel button in edit request works and redirect to overview.
 * If customer makes request inactive its removed from Partner Overview as expected.
 
-### Delete Request Customer
+<h3 id="delete-request-customer">Delete Request Customer</h3>
 
 * Deletebutton is displayed in request details.
 * When button being pressed customer is redirected to the right url to delete the request.
@@ -215,7 +297,7 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Message is being displayed to customer after confirmation.
 * Request data is removed from the database.
 
-### See Candidates as Customer
+<h3 id="see-candidates">See Candidates as Customer</h3>
 
 * Show Candidates toggle button works as expected.
 * Message is being displayed correctly if there is no candidates presented.
@@ -224,7 +306,7 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Button to see Offer works as expected.
 * Contact Manager button opens the mailclient and email to manager is displayed.
 
-### Partner Overview
+<h3 id="partner-overview">Partner Overview</h3>
 
 * All active orders is displayed in the overview.
 * Toggle the collapse works as expected.
@@ -232,7 +314,7 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Send candidate button is being displayed as expected.
 * Send candidate button is linked correctly.
 
-### Send Candidate
+<h3 id="send-candidate">Send Candidate</h3>
 
 * Every fieldform is required as expected.
 * Partner need to choose which order the candidate should be presented on (works now but with many order this should be changed to prefilled).
@@ -240,18 +322,18 @@ Acceptance Criteria 2: I can see every detail of the request including contact i
 * Cancel button works as expected.
 * The candidate is being displayed on the right request for customer.
 
-### Log out
+<h3 id="logout">Log out</h3>
 
 * Cancel button for logout works as expected.
 * Message is being displayed after log out confirmation.
 
-### Admin panel
+<h3 id="adminpanel">Admin panel</h3>
 
 * Admin can see a list of all Candidates with details.
 * Admin have access to all Orders with details.
 * Admin have access to all Users with details.
 
-### Authorization
+<h3 id="authorization">Authorization</h3>
 
 This applies to every browser. User is authenticated in the browser when they log in.
 * User gets redirected to login page if not authenticated for /new//order.
@@ -269,7 +351,7 @@ This applies to every browser. User is authenticated in the browser when they lo
 
 * SQL Injection have been tried to access database information or destroy database without any success.
 
-### Responsivness
+<h3 id="responsivness">Responsivness</h3>
 
 Chrome dev tools was used throughout the development of the project to test responsiveness. Responsiveness was tested using Dev Tools to emulate the following devices,
 
@@ -280,7 +362,7 @@ Chrome dev tools was used throughout the development of the project to test resp
 * Ipad
 * Ipad Pro
 
-### Browser Testing
+<h3 id="browser-testing">Browser Testing</h3>
 
 During development, the testing was mainly done solely using Google Chrome.
 
@@ -292,7 +374,7 @@ In production the site has been tested on the following browsers,
 
 ---
 
-## Validation
+<h2 id="validation">Validation</h2>
 
 ### [W3C HTML Validator](https://validator.w3.org/)
 * 0 Errors
@@ -313,13 +395,13 @@ In production the site has been tested on the following browsers,
 
 The python extention was used to test Python for Pep8 compliance withit's built in linting too.
 
-Alot of the Python errors were fixed during development.
+* Alot of the Python errors were fixed during development.
 Any errors that related to files that were auto generated by Django were left untouched.
-* In settings AUTH_PASSWORD_VALIDATORS, STATICFILES_STORAGE due to implementation with help from Hello Django episode on Code Institute.
+* In settings AUTH_PASSWORD_VALIDATORS, STATICFILES_STORAGE due to implementation with help from Hello Django episode on Code Institute. # noqa is added to override the error.
 * Migration Files
 * ./manage.py
 
-### Lighthouse Testing
+<h3 id="lighthouse">Lighthouse Testing</h3>
 
 #### On desktop for homepage
 ![lighthouse1](./readme-files/images/testing/lighthouse_desktop.png)
@@ -329,12 +411,14 @@ Any errors that related to files that were auto generated by Django were left un
 
 ---
 
-### Bugs
+<h2 id="bugs">Bugs</h2>
+
 * Login confirmation message do not dissapear when user have been logged in after signing up.
 * Internal navbar links (Why Us and Step-by-step) is not accessable when user have logged in.
 * Footer is not displayed on pages when the user don´t need to scroll. The footer only appears on pages where users need to scroll.
 
-#### Solved Bugs
+<h3 id="solved-bugs">Solved Bugs</h3>
+
 * Rediricting to right page when user have logged in
 I had i main issue that user was not redirected to the right page based on the user type. I was able to solve that issue with a custom view and defining the get user type, the redirected to the right url based on user type.
 
