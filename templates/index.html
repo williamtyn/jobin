@@ -84,14 +84,11 @@
 
 <!--Call to action with button-->
 <div class="container-fluid py-5 cta text-center">
-    <h3 class="display-5 fw-bold"></h3>
-    <br>
-    <br>
-    <br>
-    <p class="col-md-12 fs-4">
-        Do you want to present your consultants?
-    </p>
-    <a class="btn btn-outline-light btn-lg m-2" href="{% url 'account_signup' %}" role="button">Partner Signup</a>
+    <div class="col-md-12 cta-overlay">
+            <h3 class="display-5 ">Do you want to present your consultants?</h3>
+            <a class="btn btn-outline-light btn-lg m-2" href="{% url 'account_signup' %}" role="button">Partner Signup</a>
+        </div>
+    </div>
 </div>
 
 <!--Step By Step-->
