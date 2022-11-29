@@ -254,7 +254,12 @@ On this project PostGresql is used with ElephantSQL
 ---
 
 ## Testing
-(link to testing.md)
+Link to the testing document.
+[TESTING.md](https://github.com/williamtyn/jobin/blob/main/TESTING.md)
+
+---
+
+## Deployment
 
 ---
 
@@ -275,8 +280,33 @@ On this project PostGresql is used with ElephantSQL
 * [Pagespeed](https://pagespeed.web.dev/)
 * [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/)
 * [Techsini](https://techsini.com/multi-mockup/index.php)
+* [Pexels](https://www.pexels.com)
 
-### Sources
+### Credits
+
+#### Code
+* To help me start with the project and understan the basics i followed [Code Institute](https://codeinstitute.net/se/) and Matt´s Walktrough on "I Think therefore i Blog", big thanks for getting me started.
+
+* Ed, Ger and Oisin, Tutors at [Code Institute](https://codeinstitute.net/se/) helped me solve some bugs in my code, big thanks.
+
+#### Bootstrap
+* Bootstrap have a amazing library and have helped me focus on the backend and save a lot of time with style, and layout on the frontend.
+
+#### Django
+* The generic views from [Django](https://www.djangoproject.com/) made my life much easier, also great documentation.
+
+#### Issues with code
+Most of the daily problems were solved thanks to [Stackoverflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/).
+
 #### Images
 
-[Homepage Partner](https://www.pexels.com/sv-se/foto/manniskor-barbar-dator-sitter-mote-4340139/)
+### Acknowledgements
+This website was completed as a Portfolio Project 4 for the Fullstack Diploma at [Code Institute](https://codeinstitute.net/se/). I want to thank my friend *Manne* for helping me understand some with javascript functions.
+
+The project is for educational purposes only and not for public consumption.
+
+William Tynér, November 2022.
+[LinkedIn](https://www.linkedin.com/in/williamtyner/)
+
+
+
