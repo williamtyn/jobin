@@ -101,7 +101,16 @@ body {
 
 #helpmodal {
     color: #0d6efd;
-    border-bottom: 1px;
+    border: 0;
+    background-color: white;
+}
+
+.helptext ul {
+    display: none;
+}
+
+.signup li {
+    display: none;
 }
 
 /* User_orderlist */
@@ -141,12 +150,4 @@ body {
 
 #showfooter {
     display: none;
-}
-
-/* Remove position absolute to display logged in navbar */
-@media screen and (min-width: 991px) {
-
-.nav-logedin {
-    position: absolute;
-}
 }
