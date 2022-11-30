@@ -27,18 +27,19 @@ Finding the right consultant is more difficult than ever. That's why we've made 
 <li><a href="#flowchart">Flowchart</a></li>
 </ul>
 <li><a href="#user-stories">User Stories</a></li>
-<li><a href="#surface-plane">The Surface Plane</a></li>
-<ul><li><a href="#base">Base</a></li>
+<li><a href="#surface-plan">The Surface Plan</a></li>
+<ul>
+<li><a href="#base">Base</a></li>
 <li><a href="#homepage">Homepage</a></li>
 <li><a href="#signup">Signup</a></li>
 <li><a href="#login">Login</a></li>
 <li><a href="#customer-overview">Customer Overview</a></li>
-<ul><li><a href="#new-request">New Request</a></li>
+<li><a href="#new-request">New Request</a></li>
 <li><a href="#edit-request">Edit Request</a></li>
 <li><a href="#delete-request">Delete Request</a></li>
-<li><a href="#see-candidates">See Candidates</a></li></ul>
-<ul><li><a href="#partner-overview">Partner Overview</a></li>
-<li><a href="#send-candidates">Send Candidate</a></ul>
+<li><a href="#send-candidates">Send Candidates</a></ul>
+<li><a href="#see-candidates">See Candidates</a></li>
+<li><a href="#partner-overview">Partner Overview</a></li>
 </ul>
 <li><a href="#database-design">Database Design</a></ul>
 <li><a href="#testing">Testing</a></li>
@@ -82,7 +83,7 @@ Over the course of a few days, he receives more candidates on the website, and h
 Mats are satisfied.
 
 
-<h3 id="wireframes">Wireframes</h3>
+<h3 id="wireframe">Wireframes</h3>
 
 ![frontpage](./readme-files/images/wireframe/frontpage.png)
 ![frontpage#2](./readme-files/images/wireframe/frontpage2.png)
@@ -216,7 +217,7 @@ When the partner has signed up or logged in, they get redirected to the main req
 ![overview details](./readme-files/images/surface/overview-details.png)
 
 
-<h3 id="send-candidate">Send Candidate</h3>
+<h3 id="send-candidates">Send Candidates</h3>
 The partner can see information about the request and when they have a candidate that suits the request, they can present the candidate to the customer.
 
 ![present-candidate](./readme-files/images/surface/present-candidate.png)
@@ -232,7 +233,6 @@ When the customer has presented the candidate, the user can see that candidate p
 <h2 id="database-design">Database Design</h2>
 On this project postgresql is used with ElephantSQL
 
-(link to Database Diagram)
 [Database Diagram](https://res.cloudinary.com/dpliee0fu/image/upload/v1669761371/Database_Planning_gzhnzg.pdf)
 
 
@@ -259,6 +259,7 @@ On this project postgresql is used with ElephantSQL
 
 <h2 id="testing">Testing</h2>
 Link to the testing document.
+
 [TESTING.md](https://github.com/williamtyn/jobin/blob/main/TESTING.md)
 
 ---
@@ -308,11 +309,13 @@ Most of the daily problems were solved thanks to [Stackoverflow](https://stackov
 
 
 <h2 id="acknowledgements">Acknowledgements</h2>
+
 This website was completed as a Portfolio Project 4 for the Fullstack Diploma at [Code Institute](https://codeinstitute.net/se/). I want to thank my friend *Manne* for helping me understand some javascript functions.
 
 The project is for educational purposes only and not for public consumption.
 
 William Tynér, November 2022.
+
 [LinkedIn](https://www.linkedin.com/in/williamtyner/)
 
 
