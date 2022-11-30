@@ -105,14 +105,6 @@ body {
     background-color: white;
 }
 
-.helptext ul {
-    display: none;
-}
-
-.signup li {
-    display: none;
-}
-
 /* User_orderlist */
 .dividerline {
     width: 70%;
