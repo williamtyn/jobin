@@ -266,6 +266,30 @@ Link to the testing document.
 
 <h2 id="deployment">Deployment</h2>
 
+
+The Code Institiue student template was used to create this project.
+
+[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+* Click the "Use This Template" button.
+* Give your repository a name, and description if you wish.
+* Click the Create Repository from Template to create your repository.
+* Click the Gitpod button to create a gitpod workspace, this can take a few minutes.
+* When working on project using Gitpod, please open the workspace from Gitpod, this will open your previous workspace rather than creating a new one. 
+* Use the following commands to commit your work,
+git add . - adds all modified files to a staging area.
+
+git commit -m "A short message exlaining your commit" - commits all changes to a local repository.
+
+git push - pushes all your commited changes to your Github repository.
+
+Before making the first commit:
+PLEASE MAKE SURE NEVER TO PUBLISH SECRET KEYS, ADD THE env.py TO A .gitignore TO AVOID PUSHING KEYS TO GITHUB.
+
+### Heroku Deployment
+
+
+
 ---
 
 <h2 id="technologies-used">Technologies Used</h2>
