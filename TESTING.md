@@ -58,7 +58,7 @@
 <li><a href="#sixteen">As a User I can delete my request so that partners do not spend time presenting candidates if we have already found what we are looking for.</a></li>
 </ul>
 
-<h3 id="#partner-testing">Partner Testing</h3>
+<h3 id="partner-testing">Partner Testing</h3>
 <ul>
 <li><a href="#fourteen">As a User/Partner I can see information about the website/tool so that I understand why i should register an account.</a></li>
 <li><a href="#six">As a Partner I can register an account so that I can see consultant requests from companies.</a></li>
@@ -224,14 +224,16 @@ In the admin panel, the admin can see a list of every registered request in the 
 Due to sensitive information, no image of the admin panel is displayed in the readme.
 
 
-### User Stories (could) that are not done
-11. As a User I can Add my company logo to my request so that companies can clearly see which company I represent.
+## User Stories (could) that are not done
+As a User I can Add my company logo to my request so that companies can clearly see which company I represent.
 Acceptance Criteria 1: As a User i can add my logo in my user profile and the logo will be displayed for companies in the request.
 
-12. As a User I get a notice on my email when I have new candidates presented so that I have control and can act as fast as possible
+
+As a User I get a notice on my email when I have new candidates presented so that I have control and can act as fast as possible
 Acceptance Criteria 1: When candidate is presented a notice is sent automatic to the users registered email.
 
-13. As a Partner I get a notice on my email when a new request is added in my town so that I can act and start working on presenting a candidate
+
+As a Partner I get a notice on my email when a new request is added in my town so that I can act and start working on presenting a candidate
 Acceptance Criteria 1: When a new new request exists i get a email with notice of that request.
 Acceptance Criteria 2: Partner can choose which email the notice should go to.
 
@@ -394,6 +396,7 @@ In production the site has been tested on the following browsers.
 ### [W3C HTML Validator](https://validator.w3.org/)
 * 0 Errors
 * 0 Warnings
+Four errors appear on the signup.html page. The errors are generated through the authentication default package to display the signup form. as_p, and there was nothing I could do to fix the errors at this point.
 
 ### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 * 0 Errors
