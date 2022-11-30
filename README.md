@@ -288,7 +288,58 @@ PLEASE MAKE SURE NEVER TO PUBLISH SECRET KEYS, ADD THE env.py TO A .gitignore TO
 
 ### Heroku Deployment
 
+1. Log into Heroku
+2. Create a new app, choose a location closest to you
+3. Search for Heroku Postgres from the resources tab and add to your project
+4. Make sure to have dj_database_url and psycopg2 installed.
 
+pip3 install dj_database_url
+pip3 install psycopg2
+
+5. Login to the Heroku CLI - heroku login -i
+6. Run migrations on Heroku Postgres - heroku run python manage.py migrate
+7. Create a superuser - python manage.py createsuperuser
+8. Install gunicorn - pip3 install gunicorn
+9. Create a requirements.txt file - pip3 freeze > requirements.txt
+10. Create a Procfile (note the capital P), and add the following,
+
+web: gunicorn jobin.wsgi
+
+11. Disable Heroku from collecting static files
+
+heroku config:set DISABLE_COLLECTSTATIC=1 --app jobin-compare-consultants
+
+12. Add the hostname to project settings.py file
+
+ALLOWED_HOSTS = ['jobin-compare-consultants.herokuapp.com', 'localhost']
+
+13. Connect Heroku to you Github, by selecting Github as the deployment method and search for the github repository and pressing
+
+connect
+
+14. In Heroku, within settings, under config vars select
+
+Reveal config vars
+
+15. Add the following
+
+DATABASE_URL = URL to the database
+CLOUDINARY_URL = URL to cloudinary
+SECRET_KEY = The secret key
+
+16. Commit and push in your CLI
+
+git add .
+git commit -m "Initial commit"
+git push
+
+17. Go back to the Deploy tab and press
+
+Deploy Branch
+
+18. Your deployed site can be launched by clicking Open App from its page within Heroku.
+
+*During production Heroku Postgresql was no longer availible and therefore DATABASE_URL in Heroku Config Vars was changed to the ElephantSQL Postgres url.*
 
 ---
 
