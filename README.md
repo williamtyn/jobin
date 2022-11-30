@@ -267,7 +267,7 @@ Link to the testing document.
 <h2 id="deployment">Deployment</h2>
 
 
-The Code Institiue student template was used to create this project.
+The Code Institute student template was used to create this project.
 
 [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 
@@ -283,7 +283,7 @@ git commit -m "A short message exlaining your commit" - commits all changes to a
 
 git push - pushes all your commited changes to your Github repository.
 
-Before making the first commit:
+ * Before making the first commit:
 PLEASE MAKE SURE NEVER TO PUBLISH SECRET KEYS, ADD THE env.py TO A .gitignore TO AVOID PUSHING KEYS TO GITHUB.
 
 ### Heroku Deployment
@@ -385,12 +385,11 @@ Most of the daily problems were solved thanks to [Stackoverflow](https://stackov
 
 <h2 id="acknowledgements">Acknowledgements</h2>
 
-This website was completed as a Portfolio Project 4 for the Fullstack Diploma at [Code Institute](https://codeinstitute.net/se/). I want to thank my friend *Manne* for helping me understand some javascript functions.
+This website was completed as a Portfolio Project 4 for the Fullstack Diploma at [Code Institute](https://codeinstitute.net/se/). I want to thank my friend **Manne** for helping me understand some javascript functions.
 
 The project is for educational purposes only and not for public consumption.
 
 William Tynér, November 2022.
-
 [LinkedIn](https://www.linkedin.com/in/williamtyner/)
 
 
