@@ -25,13 +25,12 @@
         {% endif %}
         <button type="submit" class="btn btn-success text-center">{% trans "Sign Up" %} &raquo;</button>
       </form>
+        <!-- Text to trigger modal -->
+        <button type="button" id="helpmodal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Help me
+        </button>
     </div>
   </div>
-
-<!-- Text to trigger modal -->
-<button type="button" id="helpmodal" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Help me
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -43,7 +42,7 @@
       </div>
       <div class="modal-body">
         <p><b>Username</b></p>
-        <p>Username is required.<br>
+        <p>Username is required.
           150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
         <p><b>Email</b></p>
         <p>Email is required and must be unique.</p>
@@ -54,7 +53,7 @@
           Your password can’t be a commonly used password.
           Your password can’t be entirely numeric.</p>
         <p><b>VAT Number</b></p>
-        <p>Must be in format XXXXXX-XXXX and start with 55.</p>
+        <p>Must be in format 55XXXX-XXXX and start with 55.</p>
         <p><b>Phone</b></p>
         <p>In format 07XXXXXXXX as regular swedish numbers.</p>
       </div>
